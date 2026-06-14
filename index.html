@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LX Audiolabs</title>
+<style>
+  :root {
+    --void: #0F0F0F;
+    --abyss: #121414;
+    --surface: #171A1A;
+    --elevated: #232626;
+    --border: #2E3838;
+    --amber: #FF7319;
+    --amber-light: #FFA64D;
+    --green: #00D959;
+    --text-primary: #FFFFFF;
+    --text-label: #A6A6A6;
+    --text-dim: #666666;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--void);
+    color: var(--text-primary);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .logo .lx {
+    color: var(--amber);
+  }
+
+  .logo .audiolabs {
+    color: var(--text-primary);
+    font-weight: 400;
+  }
+
+  nav a {
+    color: var(--text-label);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 28px;
+    transition: color 0.15s ease;
+  }
+
+  nav a:hover {
+    color: var(--amber);
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+  }
+
+  .eyebrow {
+    color: var(--amber);
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  h1 .accent {
+    color: var(--amber);
+  }
+
+  .lead {
+    max-width: 600px;
+    color: var(--text-label);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 56px;
+  }
+
+  .badge {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-label);
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border-radius: 4px;
+  }
+
+  .badge.highlight {
+    border-color: var(--amber);
+    color: var(--amber-light);
+  }
+
+  .upcoming {
+    width: 100%;
+    max-width: 880px;
+  }
+
+  .upcoming-label {
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .plugin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .plugin-card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 24px;
+    text-align: left;
+  }
+
+  .plugin-card .name {
+    color: var(--amber);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .plugin-card .tagline {
+    color: var(--text-label);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .plugin-card .status {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 4px 10px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 28px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: var(--text-label);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color 0.15s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--amber);
+  }
+
+  .footer-note {
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      padding: 20px 24px;
+    }
+    nav a {
+      margin-left: 16px;
+      font-size: 12px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="lx">LX</span><span class="audiolabs">AUDIOLABS</span>
+  </div>
+  <nav>
+    <a href="https://cleveraudio.org/" target="_blank" rel="noopener">CLAP</a>
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">Support</a>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">AI-first audio tools</div>
+  <h1>Built from <span class="accent">real</span> mixing &amp; mastering workflows.</h1>
+  <p class="lead">
+    LX Audiolabs designs CLAP plugins shaped by years of production and mastering experience —
+    tools that analyze, correct, and sculpt sound the way a working engineer actually thinks.
+  </p>
+
+  <div class="badge-row">
+    <div class="badge highlight">CLAP-first</div>
+    <div class="badge">AI-assisted analysis</div>
+    <div class="badge">Built by a producer</div>
+  </div>
+
+  <div class="upcoming">
+    <div class="upcoming-label">More to come</div>
+    <div class="plugin-grid">
+      <div class="plugin-card">
+        <div class="name">Equilibrium</div>
+        <div class="tagline">Spectral &amp; stereo balance tool for pre-mastering.</div>
+        <div class="status">In development</div>
+      </div>
+      <div class="plugin-card">
+        <div class="name">Meridian</div>
+        <div class="tagline">Spectral sculptor &amp; dynamics for groups and tracks.</div>
+        <div class="status">In development</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.facebook.com/LXNDR.BE/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.beatport.com/de/artist/lxndr-be/1150426" target="_blank" rel="noopener">Beatport</a>
+    <a href="https://ardvinnamoon.bandcamp.com/" target="_blank" rel="noopener">Bandcamp — Ardvinnamoon</a>
+    <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">Buy me a coffee</a>
+    <a href="https://cleveraudio.org/" target="_blank" rel="noopener">CLAP</a>
+  </div>
+  <div class="footer-note">LX Audiolabs &mdash; LXNDR (BE)</div>
+</footer>
+
+</body>
+</html>
