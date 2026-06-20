@@ -20,13 +20,10 @@
     --text-dim: #666666;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html, body {
+  html {
+    scroll-behavior: smooth;
     height: 100%;
   }
 
@@ -38,6 +35,8 @@
     flex-direction: column;
     min-height: 100vh;
   }
+
+  /* ── Header ────────────────────────────── */
 
   header {
     display: flex;
@@ -57,36 +56,56 @@
     letter-spacing: 1px;
   }
 
-  .logo .lx {
-    color: var(--amber);
-  }
+  .logo .lx { color: var(--amber); }
+  .logo .audiolabs { color: var(--text-primary); font-weight: 400; }
 
-  .logo .audiolabs {
-    color: var(--text-primary);
-    font-weight: 400;
-  }
+  nav { display: flex; align-items: center; gap: 4px; }
 
   nav a {
     color: var(--text-label);
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1px;
-    margin-left: 28px;
+    margin-left: 24px;
     transition: color 0.15s ease;
   }
 
-  nav a:hover {
-    color: var(--amber);
+  nav a:hover { color: var(--amber); }
+
+  .sponsor-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 115, 25, 0.08);
+    border-radius: 4px;
+    color: var(--text-label);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.15s ease;
+    margin-left: 24px;
   }
 
-  main {
+  .sponsor-btn:hover {
+    background: rgba(255, 115, 25, 0.15);
+    border-color: var(--amber);
+    color: var(--amber-light);
+  }
+
+  .sponsor-btn svg { width: 16px; height: 16px; }
+
+  /* ── Hero ──────────────────────────────── */
+
+  .hero {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px 24px;
+    padding: 60px 24px 40px;
   }
 
   .eyebrow {
@@ -105,9 +124,7 @@
     margin-bottom: 20px;
   }
 
-  h1 .accent {
-    color: var(--amber);
-  }
+  h1 .accent { color: var(--amber); }
 
   .lead {
     max-width: 600px;
@@ -123,7 +140,7 @@
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 56px;
+    margin-bottom: 24px;
   }
 
   .badge {
@@ -134,6 +151,14 @@
     letter-spacing: 1px;
     padding: 8px 18px;
     border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .badge:hover {
+    border-color: var(--amber);
+    color: var(--amber-light);
+    background: rgba(255, 115, 25, 0.06);
   }
 
   .badge.highlight {
@@ -141,9 +166,53 @@
     color: var(--amber-light);
   }
 
+  /* ── Update Banner ─────────────────────── */
+  <!-- UPDATE: change date + text below -->
+
+  .update-banner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto 40px;
+    padding: 14px 24px;
+    border: 1px solid rgba(255, 115, 25, 0.25);
+    background: rgba(255, 115, 25, 0.06);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--amber-light);
+  }
+
+  .update-banner .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  .update-banner .date {
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  <!-- /UPDATE -->
+
+  /* ── Plugin Cards ──────────────────────── */
+
   .upcoming {
     width: 100%;
     max-width: 880px;
+    margin: 0 auto;
   }
 
   .upcoming-label {
@@ -197,37 +266,119 @@
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--text-dim);
-    border: 1px solid var(--border);
+    color: var(--amber-light);
+    border: 1px solid rgba(255, 115, 25, 0.3);
     border-radius: 3px;
     padding: 4px 10px;
   }
 
-  .sponsor-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border: 1px solid var(--border);
-    background: rgba(255, 115, 25, 0.08);
-    border-radius: 4px;
-    color: var(--text-label);
-    text-decoration: none;
+  .plugin-card .yt-placeholder {
+    display: none; /* set to inline-block when walkthrough videos are live */
+    margin-top: 12px;
     font-size: 12px;
-    letter-spacing: 0.5px;
-    transition: all 0.15s ease;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s ease;
   }
 
-  .sponsor-btn:hover {
-    background: rgba(255, 115, 25, 0.15);
-    border-color: var(--amber);
+  .plugin-card .yt-placeholder:hover {
+    color: var(--amber);
+  }
+
+  .plugin-card .yt-placeholder::before {
+    content: "▶ ";
+    font-size: 10px;
+  }
+
+  /* ── Info Sections ─────────────────────── */
+
+  .info-section {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 64px 0 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .info-section:first-of-type {
+    border-top: none;
+    padding-top: 48px;
+  }
+
+  .info-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: var(--amber);
+  }
+
+  .info-section p {
+    color: var(--text-label);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  .info-section p + p {
+    margin-top: 12px;
+  }
+
+  .info-section a {
     color: var(--amber-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
-  .sponsor-btn svg {
-    width: 16px;
-    height: 16px;
+  .info-section strong.amber {
+    color: var(--amber);
   }
+
+  /* ── FAQ ───────────────────────────────── */
+
+  .faq-section {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 64px 0 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    color: var(--amber);
+  }
+
+  .faq-item {
+    margin-bottom: 28px;
+  }
+
+  .faq-item .q {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .faq-item .a {
+    color: var(--text-label);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  .faq-item .a a {
+    color: var(--amber-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .faq-item .a a:hover { color: var(--amber); }
+
+  /* ── Footer ────────────────────────────── */
 
   footer {
     border-top: 1px solid var(--border);
@@ -254,9 +405,7 @@
     transition: color 0.15s ease;
   }
 
-  .footer-links a:hover {
-    color: var(--amber);
-  }
+  .footer-links a:hover { color: var(--amber); }
 
   .footer-note {
     color: var(--text-dim);
@@ -264,21 +413,16 @@
     letter-spacing: 1px;
   }
 
+  /* ── Responsive ────────────────────────── */
+
   @media (max-width: 600px) {
-    header {
-      padding: 20px 24px;
-    }
-    nav a {
-      margin-left: 16px;
-      font-size: 12px;
-    }
-    h1 {
-      font-size: 36px;
-    }
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    header { padding: 20px 24px; }
+    nav a { margin-left: 16px; font-size: 12px; }
+    h1 { font-size: 36px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .hero { padding: 40px 20px 30px; }
+    .info-section, .faq-section { padding: 48px 20px 36px; }
+    .update-banner { margin: 0 20px 30px; flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -297,43 +441,153 @@
       </svg>
       SPONSOR
     </a>
-    <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">Support</a>
   </nav>
 </header>
 
-<main>
+<!-- ═══════════════ HERO ═══════════════ -->
+
+<div class="hero">
   <div class="eyebrow">AI-first audio tools</div>
-  <h1>Built from <span class="accent">real</span> mixing &amp; mastering workflows.</h1>
+  <h1>Built from <span class="accent">real</span> producing &amp; mastering workflows.</h1>
   <p class="lead">
     LX Audiolabs designs CLAP plugins shaped by years of production and mastering experience —
     tools that analyze, correct, and sculpt sound the way a working engineer actually thinks.
   </p>
 
   <div class="badge-row">
-    <div class="badge highlight">CLAP-first</div>
-    <div class="badge">AI-assisted analysis</div>
-    <div class="badge">Built by a producer</div>
+    <a href="#clap-first" class="badge highlight">CLAP-first</a>
+    <a href="#ai-assisted" class="badge">AI-assisted analysis</a>
+    <a href="#producer" class="badge">Built by a producer</a>
   </div>
+</div>
 
-  <div class="upcoming">
-    <div class="upcoming-label">More to come</div>
-    <div class="plugin-grid">
-      <div class="plugin-card">
-        <img src="img/Equilibrum.jpg" alt="Equilibrium">
-        <div class="name">Equilibrium</div>
-        <div class="tagline">Balance your master bus by frequency. Real-time spectral analysis meets surgical band-by-band EQ and stereo control—no mastering-grade compression, just precision correction.
-        </div>
-        <div class="status">In development</div>
+<!-- ═══════════════ UPDATE ═══════════════ -->
+<!-- UPDATE: change date + text below -->
+
+<div class="update-banner">
+  <div class="dot"></div>
+  <span class="date">2026-06-20</span>
+  <span>Equilibrium v1.0.5 &amp; Meridian v1.0.5 — Available soon</span>
+</div>
+
+<!-- /UPDATE -->
+
+<!-- ═══════════════ PLUGINS ═══════════════ -->
+
+<div class="upcoming">
+  <div class="upcoming-label">More to come</div>
+  <div class="plugin-grid">
+    <div class="plugin-card">
+      <img src="img/Equilibrum.jpg" alt="Equilibrium">
+      <div class="name">Equilibrium</div>
+      <div class="tagline">Balance your master bus by frequency. Real-time spectral analysis meets surgical band-by-band EQ and stereo control—no mastering-grade compression, just precision correction.
       </div>
-      <div class="plugin-card">
-        <img src="img/Meridian.jpg" alt="Meridian">
-        <div class="name">Meridian</div>
-        <div class="tagline">Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor + analog saturation in one focused workflow. With spectral visualization to guide every move.</div>
-        <div class="status">In development</div>
-      </div>
+      <div class="status">Available soon</div>
+    </div>
+    <div class="plugin-card">
+      <img src="img/Meridian.jpg" alt="Meridian">
+      <div class="name">Meridian</div>
+      <div class="tagline">Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor + analog saturation in one focused workflow. With spectral visualization to guide every move.</div>
+      <div class="status">Available soon</div>
     </div>
   </div>
-</main>
+</div>
+
+<!-- ═══════════════ CLAP-FIRST ═══════════════ -->
+
+<div class="info-section" id="clap-first">
+  <h2>CLAP-First</h2>
+  <p>
+    All LX Audiolabs plugins are built exclusively for the <a href="https://cleveraudio.org/" target="_blank" rel="noopener">CLAP</a> plugin format —
+    an open, modern standard designed by audio developers who wanted to break free from legacy limitations.
+    CLAP is supported in <strong>Bitwig Studio</strong>, <strong>Reaper</strong>, <strong>Studio One</strong>, and <strong>FL Studio</strong>.
+  </p>
+  <p>
+    If your DAW doesn't support CLAP yet — write their support a friendly email. Or just switch to one that does. 🦖
+  </p>
+</div>
+
+<!-- ═══════════════ AI-ASSISTED ═══════════════ -->
+
+<div class="info-section" id="ai-assisted">
+  <h2>AI-Assisted Analysis</h2>
+  <p>
+    <strong>No AI runs inside the plugins.</strong> Every EQ curve, every compressor threshold, every spectral
+    display is 100% deterministic math — no neural networks touching your audio.
+  </p>
+  <p>
+    "AI-first" means these plugins were <em>developed</em> with AI pair-programming. And they ship with
+    <strong class="amber">SNAP</strong>: a function that exports your complete plugin state — spectrum, band levels, parameters —
+    as a structured markdown snapshot. Feed that into ChatGPT, Claude, or any LLM and get
+    analysis, suggestions, or a second opinion on your mix. The AI works <em>for</em> you, not <em>in</em> the signal path.
+  </p>
+</div>
+
+<!-- ═══════════════ PRODUCER ═══════════════ -->
+
+<div class="info-section" id="producer">
+  <h2>Built by a Producer</h2>
+  <p>
+    Behind LX Audiolabs is a solo producer with ~40 years in electronic music — from soldering
+    DIY modular systems to releasing Deep Hypnotic / Ambient Techno as
+    <strong>LXNDR (BE)</strong> and <strong>ITEM8</strong> on the independent label
+    <strong>Ardvinnamoon</strong>.
+  </p>
+  <p>
+    These plugins aren't built by a faceless company. They're born from real sessions in Bitwig
+    and Reaper — scratch-your-own-itch tools that solve actual mixing and mastering problems,
+    released for free because good tools should be accessible.
+  </p>
+</div>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+
+<div class="faq-section" id="faq">
+  <h2>FAQ</h2>
+
+  <div class="faq-item">
+    <div class="q">Q: So many megabytes for such a small plugin — what's in there, lead?</div>
+    <div class="a">
+      Nope, pure graphics power! 🚀 These plugins use <strong>Rust</strong> and the
+      <strong>Iced</strong> framework with <strong>wgpu</strong> on board — a tiny portable graphics
+      engine that lives inside the plugin. It brings its own cinema instead of relying on your
+      operating system's wobbly folding chairs. The first 3–4 MB are reserved for the red carpet,
+      lighting rig, and popcorn machine. Everything beyond that is actual audio magic. 🍿😎
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q">Q: You call it "AI-first" — where's the artificial intelligence?</div>
+    <div class="a">
+      "AI-first" means the entire architecture and code were designed so I can evolve them
+      <em>together with</em> AI assistants. The AI is my pair-programming buddy — it helped
+      write the Rust, not the reverb. The plugin itself runs on pure, deterministic math.
+      If it sounds bad, you can't blame the AI — that one's on you (or me). 🤖🔨
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q">Q: Why CLAP only? Will there be VST3?</div>
+    <div class="a">
+      CLAP is the future — open, modern, no legacy cruft. I use <strong>Bitwig</strong>
+      and <strong>Reaper</strong> myself. If your DAW can't load CLAP: switch to one that
+      can, or send their support team persistently friendly emails until they wake up. 🦖✉️
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q">Q: Are the plugins really free?</div>
+    <div class="a">
+      Yes — completely free. I've always supported open-source and freeware, and I'm paying
+      it forward. If the plugins make your sessions better and you want to keep my caffeine
+      levels healthy,
+      <a href="https://github.com/sponsors/lxndrbe" target="_blank" rel="noopener">sponsor me on GitHub</a>
+      or <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">buy me a coffee</a> ☕️🙏
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
 
 <footer>
   <div class="footer-links">
@@ -344,7 +598,7 @@
     <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">Buy me a coffee</a>
     <a href="https://cleveraudio.org/" target="_blank" rel="noopener">CLAP</a>
   </div>
-  <div class="footer-note">LX Audiolabs &mdash; LXNDR (BE)</div>
+  <div class="footer-note">LX Audiolabs &mdash; LXNDR (BE) · ITEM8</div>
 </footer>
 
 </body>
