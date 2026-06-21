@@ -236,6 +236,41 @@ main .lead {
   line-height: 1.4;
 }
 
+.plugin-card .name .ver {
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: 6px;
+}
+
+.plugin-card .dl-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.plugin-card .dl-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border: 1px solid var(--amber);
+  border-radius: 4px;
+  color: var(--amber-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+  background: rgba(255, 115, 25, 0.06);
+}
+
+.plugin-card .dl-btn:hover {
+  background: rgba(255, 115, 25, 0.18);
+  color: var(--text-primary);
+}
+
 .plugin-card .status {
   display: inline-block;
   margin-top: 10px;
