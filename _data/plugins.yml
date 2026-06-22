@@ -39,9 +39,8 @@
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/equilibrium-win.clap
-    mac: assets/releases/equilibrium-mac.clap
-    mac: assets/releases/equilibrium-mac.clap
     linux: assets/releases/equilibrium-linux.clap
+    mac: assets/releases/equilibrium-mac.clap
   manual_url: ""
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/Equilibrum-SC.png
@@ -91,9 +90,8 @@
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/meridian-win.clap
-    mac: assets/releases/meridian-mac.clap
-    mac: assets/releases/meridian-mac.clap
     linux: assets/releases/meridian-linux.clap
+    mac: assets/releases/meridian-mac.clap
   manual_url: ""
   youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
   image: assets/img/Meridian-SC.png
