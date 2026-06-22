@@ -1,0 +1,74 @@
+---
+layout: default
+title: FAQ
+---
+
+<main>
+  <div class="eyebrow">Questions &amp; Answers</div>
+  <h1>FAQ</h1>
+
+  <div class="faq-section">
+
+    <div class="faq-item">
+      <div class="q">Q: So many megabytes for such a small plugin — what's in there, lead?</div>
+      <div class="a">
+        Nope, pure graphics power! 🚀 These plugins use <strong>Rust</strong> and the
+        <strong>Iced</strong> framework with <strong>wgpu</strong> on board — a tiny portable graphics
+        engine that lives inside the plugin. It brings its own cinema instead of relying on your
+        operating system's wobbly folding chairs. The first 3–4 MB are reserved for the red carpet,
+        lighting rig, and popcorn machine. Everything beyond that is actual audio magic. 🍿😎
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q: You call it "AI-first" — where's the artificial intelligence?</div>
+      <div class="a">
+        "AI-first" means the entire architecture and code were designed so I can evolve them
+        <em>together with</em> AI assistants. The AI is my pair-programming buddy — it helped
+        write the Rust, not the reverb. The plugin itself runs on pure, deterministic math.
+        If it sounds bad, you can't blame the AI — that one's on you (or me). 🤖🔨
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q: Why CLAP only? Will there be VST3?</div>
+      <div class="a">
+        CLAP is the future — open, modern, no legacy cruft. I use <strong>Bitwig</strong>
+        and <strong>Reaper</strong> myself. If your DAW can't load CLAP: switch to one that
+        can, or send their support team persistently friendly emails until they wake up. 🦖✉️
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q: Are the plugins really free?</div>
+      <div class="a">
+        Yes — completely free. I've always supported open-source and freeware, and I'm paying
+        it forward. If the plugins make your sessions better and you want to keep my caffeine
+        levels healthy,
+        <a href="{{ site.github_sponsor }}" target="_blank" rel="noopener">sponsor me on GitHub</a>
+        or <a href="{{ site.buymeacoffee }}" target="_blank" rel="noopener">buy me a coffee</a> ☕️🙏
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q: How do I install CLAP plugins?</div>
+      <div class="a">
+        Drop the <code>.clap</code> file into your CLAP folder. On Windows that's typically
+        <code>C:\Program Files\Common Files\CLAP</code>. On Linux it's <code>~/.clap</code>.
+        Restart your DAW and it should pick them up automatically. No installer needed.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="q">Q: What is SNAP and how do I use it?</div>
+      <div class="a">
+        SNAP exports your complete plugin state — spectrum data, band levels, all parameters —
+        as a structured markdown summary. Copy it from the plugin UI and paste it into ChatGPT,
+        Claude, or any LLM. You'll get mix analysis, frequency balance suggestions, and
+        troubleshooting tips — all from an AI that sees exactly what your plugin sees,
+        without ever touching the audio itself.
+      </div>
+    </div>
+
+  </div>
+</main>

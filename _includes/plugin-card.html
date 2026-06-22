@@ -1,0 +1,13 @@
+<a href="{{ '/plugins/' | append: plugin.slug | append: '/' | relative_url }}" class="plugin-card">
+  {% if plugin.image and plugin.image != "" %}
+  <img src="{{ plugin.image | relative_url }}" alt="{{ plugin.name }}">
+  {% endif %}
+  <div class="card-info">
+    <div class="name">{{ plugin.name }} <span class="ver">{{ plugin.version }}</span></div>
+    <div class="tagline">{{ plugin.tagline }}</div>
+    {% if plugin.status == "upcoming" %}
+    <div class="status">Coming Soon</div>
+    {% endif %}
+  </div>
+</a>
+

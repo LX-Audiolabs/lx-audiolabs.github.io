@@ -1,0 +1,115 @@
+<!---
+  plugin.html — Volle Plugin-Detailseite
+  Frontmatter: layout: plugin, plugin: <slug>
+  Holt Daten aus _data/plugins.yml
+--->
+{% assign plugin = site.data.plugins | where: "slug", page.plugin | first %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+
+{% include header.html %}
+
+<main>
+  <div class="plugin-hero">
+    {% if plugin.image and plugin.image != "" %}
+    <img src="{{ plugin.image | relative_url }}" alt="{{ plugin.name }}" class="plugin-hero-img">
+    {% endif %}
+    <div class="plugin-hero-text">
+      <div class="eyebrow">{{ plugin.status | upcase }}</div>
+      <h1>{{ plugin.name }} <span class="ver">{{ plugin.version }}</span></h1>
+      <p class="lead">{{ plugin.description }}</p>
+    </div>
+  </div>
+
+  <div class="plugin-content">
+
+    {% if plugin.downloads and plugin.status != "upcoming" %}
+    <div class="plugin-downloads">
+      <h2>Download</h2>
+      <div class="dl-row">
+        <a href="{{ plugin.downloads.win | relative_url }}" class="dl-btn large">Windows</a>
+        <a href="{{ plugin.downloads.linux | relative_url }}" class="dl-btn large">Linux</a>
+      </div>
+      <div class="howto-install">
+        <h3>How to install</h3>
+        <ol>
+          <li>Download the <code>.clap</code> file for your platform</li>
+          <li>Copy it into your CLAP folder:
+            <ul>
+              <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
+              <li><strong>Linux:</strong> <code>~/.clap</code></li>
+              <li>Or create your own folder and add it in your DAW's plugin settings</li>
+            </ul>
+          </li>
+          <li>Restart your DAW — or use its plugin reload/scan function</li>
+        </ol>
+        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one and reload your DAW.</p>
+      </div>
+    </div>
+    {% endif %}
+<br>
+    <div class="plugin-features">
+      <h2>Features</h2>
+      <ul>
+        {% for feature in plugin.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+<br>
+    <div class="plugin-tech">
+      <h2>Technical</h2>
+      <dl>
+        <dt>Format</dt><dd>{{ plugin.tech.format }}</dd>
+        <dt>Platforms</dt><dd>{{ plugin.tech.platforms }}</dd>
+        <dt>Language</dt><dd>{{ plugin.tech.language }}</dd>
+      </dl>
+    </div>
+<br>
+    <div class="plugin-links">
+      <h2>Resources</h2>
+      <div class="resource-links">
+        {% if plugin.manual_url and plugin.manual_url != "" %}
+        <a href="{{ plugin.manual_url }}" target="_blank" rel="noopener" class="resource-btn">📖 User Manual</a>
+        {% else %}
+        <span class="resource-btn disabled">📖 User Manual — coming soon</span>
+        {% endif %}
+        {% if plugin.youtube_url and plugin.youtube_url != "" %}
+        <a href="{{ plugin.youtube_url }}" target="_blank" rel="noopener" class="resource-btn">▶ Watch on YouTube</a>
+        {% else %}
+        <span class="resource-btn disabled">▶ Walkthrough Video — coming soon</span>
+        {% endif %}
+      </div>
+    </div>
+<br>
+    <div class="plugin-snap">
+      <h2>SNAP — AI Analysis</h2>
+      <p>
+        {{ plugin.name }} ships with <strong>SNAP</strong>: export your complete plugin state —
+        spectrum, band levels, parameters — as a structured markdown snapshot.
+        Feed that into ChatGPT, Claude, or any LLM for analysis, suggestions,
+        or a second opinion on your mix.
+      </p>
+      <p>
+        SNAP saves the snapshot as a <code>.md</code> (Markdown) file in your plugin's vault folder.
+        To read it, use any Markdown reader — we recommend
+        <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a>
+        for the best experience.
+      </p>
+    </div>
+  </div>
+<br>
+  <div class="back-link">
+    <a href="{{ '/plugins/' | relative_url }}">← All Plugins</a>
+  </div>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

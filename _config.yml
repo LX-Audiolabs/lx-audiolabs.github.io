@@ -1,0 +1,33 @@
+# ── LX Audiolabs ─ Jekyll Config ──
+title: LX Audiolabs
+email: lxndrbe@proton.me
+description: >-
+  AI-first audio tools — CLAP plugins shaped by real producing & mastering workflows.
+baseurl: ""
+url: "https://lxndrbe.github.io"
+
+# Update Banner — ändere hier Datum + Text
+update_date: "2026-06-21"
+update_text: "Equilibrium v1.1.0 &amp; Meridian v1.1.0 — Available now"
+
+# Social
+youtube: https://www.youtube.com/@lxndrbe
+github_sponsor: https://github.com/sponsors/lxndrbe
+buymeacoffee: https://buymeacoffee.com/lxndrbe
+facebook: https://www.facebook.com/LXNDR.BE/
+beatport: https://www.beatport.com/de/artist/lxndr-be/1150426
+bandcamp: https://ardvinnamoon.bandcamp.com/
+
+# Build settings
+markdown: kramdown
+plugins: []
+
+# Exclude from output
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .git
+  - .gitignore
+  - CNAME

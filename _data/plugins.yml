@@ -1,0 +1,117 @@
+- slug: equilibrium
+  name: Equilibrium
+  version: v1.1.0
+  tagline: >-
+    Balance your master bus by frequency. Real-time spectral analysis meets surgical
+    band-by-band EQ and stereo control — no mastering-grade compression, just precision correction.
+  description: >-
+    Equilibrium is your spectral balancer for the master bus.
+    It splits the frequency spectrum into five independent bands — Sub, Bass, Mid, Hi-Mid,
+    Presence — each with its own EQ, stereo width, and pan control. A real-time FFT overlay
+    shows you exactly what's happening across your mix in zero-latency processing, eliminating
+    guesswork and delivering surgical precision.
+    <br><br>
+    Unlike traditional parametric EQs that require you to hunt for the right frequency,
+    Equilibrium uses <strong>band-based design</strong>: you see the problematic frequency range,
+    measure its deviation from target, and adjust gain, stereo width, or pan directly above that
+    band's visualization. The integrated analysis and control promotes fast, accurate
+    mixing decisions without context-switching between windows.
+    <br><br>
+    Purpose-built for <strong>pre-mastering balance</strong>, Equilibrium corrects mix
+    imbalances, tightens stereo imagery, and prepares your mix for the mastering chain.
+    Export your plugin state via SNAP and feed it into any AI for feedback —
+    this is the <strong>AI-First</strong> approach to mixing.
+  features:
+    - "5-band spectral equalizer with real-time FFT overlay and tolerance visualization"
+    - "Independent stereo width control per band (mono to 150% width)"
+    - "Internal Mid/Side processing mode with configurable mono floor"
+    - "Phase Correlation metering and L/R balance display"
+    - "Auto Gain Compensation to maintain consistent output level during EQ adjustments"
+    - "Pre-Master Gain Correction with configurable target peak (−6 to −3 dB)"
+    - "Goniometer scope visualization with auto-scaling envelope follower"
+    - "SNAP export — structured Markdown snapshot for AI-assisted analysis and feedback"
+    - "Zero-latency processing with optional pre-master limiting"
+    - "GPU-accelerated Iced/wgpu UI with responsive band visualization"
+    - "Mono and Delta monitoring modes for diagnostic analysis"
+  tech:
+    format: CLAP
+    platforms: "Windows x64, Linux x64"
+    language: Rust (nice-plug, Iced, wgpu)
+  downloads:
+    win: assets/releases/equilibrium-win.clap
+    linux: assets/releases/equilibrium-linux.clap
+  manual_url: ""
+  youtube_url: ""
+  image: assets/img/Equilibrum-SC.png
+  status: stable
+
+- slug: meridian
+  name: Meridian
+  version: v1.1.0
+  tagline: >-
+    Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
+    analog saturation in one focused workflow. With spectral visualization to guide every move.
+  description: >-
+    Meridian is a channel shaper built for tracks and group channels that need both surgical EQ
+    and character. It combines a 5-band parametric EQ with variable frequencies, a soft-knee
+    compressor, and analog-style saturation in a purpose-built signal flow.
+    <br><br>
+    Unlike traditional mixing chains that separate tonal shaping from dynamic control,
+    Meridian uses an <strong>intentional hybrid approach</strong>: exciter before compressor,
+    saturation after. The compressor <em>reacts to</em> the harmonics you create with the
+    exciter — resulting in denser, more organic glue. Saturation then adds warmth on top,
+    subtly coloring the already-shaped dynamics. The result is neither overprocessed nor
+    sterile — just focused shaping that <strong>stacks intelligently</strong>.
+    <br><br>
+    Every move is visualized in real-time: a 1/3-octave-smoothed FFT spectrum shows your mix
+    after processing, with an <strong>amber EQ-curve overlay</strong> displaying the exact
+    effect of each band. Phase correlation and goniometer monitoring ensure your stereo image
+    stays tight and intentional. Solo bands to isolate problem frequencies, and export your
+    settings as a structured Markdown snapshot for <strong>AI-assisted feedback</strong> and
+    iteration — this is mixing that shows its work.
+  features:
+    - "5-band parametric EQ with variable frequencies (Bass, Lo-Mid, Mid, Hi-Mid, High)"
+    - "Per-band slope selection (A/B/C for Q control: 0.4 / 0.7 / 1.5)"
+    - "Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)"
+    - "High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)"
+    - "Soft-knee compressor (1.5–4.0:1 ratio with automatic knee softness)"
+    - "Parallel compression for transparent tone shaping (0–100% mix)"
+    - "Analog-style saturation (tube-like warmth, placed AFTER compressor)"
+    - "Global stereo width control (0–200%)"
+    - "Real-time FFT spectrum with 1/3-octave smoothing"
+    - "Amber EQ curve overlay showing exact band response"
+    - "Stereo phase correlation meter and goniometer visualization"
+    - "SNAP export — structured Markdown snapshot for AI feedback"
+    - "Zero-latency processing with denormal protection"
+  tech:
+    format: CLAP
+    platforms: "Windows x64, Linux x64"
+    language: Rust (nice-plug, Iced, wgpu)
+  downloads:
+    win: assets/releases/meridian-win.clap
+    linux: assets/releases/meridian-linux.clap
+  manual_url: ""
+  youtube_url: ""
+  image: assets/img/Meridian-SC.png
+  status: stable
+
+- slug: lucent
+  name: Lucent
+  version: coming soon
+  tagline: Transparent dynamics and clarity. Precision compressor with spectral awareness.
+  description: >-
+    Lucent gives you transparent, musical dynamics control. A spectral-aware compressor
+    that respects the frequency balance of your material while taming peaks and enhancing clarity.
+  features:
+    - "Spectral-aware compression"
+    - "Transparent peak limiting"
+    - "Auto-release based on material analysis"
+  tech:
+    format: CLAP
+    platforms: "Windows x64, Linux x64"
+    language: Rust (nih-plug, Iced, wgpu)
+  downloads:
+    win: "#"
+    linux: "#"
+  image: ""
+  status: upcoming
