@@ -1,6 +1,6 @@
 - slug: equilibrium
   name: Equilibrium
-  version: v1.1.0
+  version: v1.1.2
   tagline: >-
     Balance your master bus by frequency. Real-time spectral analysis meets surgical
     band-by-band EQ and stereo control — no mastering-grade compression, just precision correction.
@@ -48,7 +48,7 @@
 
 - slug: meridian
   name: Meridian
-  version: v1.1.2
+  version: v1.2.1
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
