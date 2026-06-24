@@ -8,10 +8,10 @@ url: "https://lxndrbe.github.io"
 
 # Update Banner — newest first
 updates:
-  -date: "2026-06-24"
+  - date: "2026-06-24"
     text: "Aether v1.0.0 OUT NOW: Harman meets Crossfeed"
   - date: "2026-06-23"
-    text: "Meridian v1.2.1 — Bugfix: AUTO LOUD & FFT smoothness + NEW Feature: Gain Reduction Visualizer" 
+    text: "Meridian v1.2.1 — Bugfix: AUTO LOUD & FFT smoothness + NEW Feature: Gain Reduction Visualizer"
   - date: "2026-06-22"
     text: "Now also CLAP for Mac — All plugins available for Apple Silicon"
  
