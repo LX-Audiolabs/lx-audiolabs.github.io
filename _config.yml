@@ -29,8 +29,11 @@ bandcamp: https://ardvinnamoon.bandcamp.com/
 
 # Build settings
 markdown: kramdown
-plugins: []
-
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  
 # Exclude from output
 exclude:
   - README.md
