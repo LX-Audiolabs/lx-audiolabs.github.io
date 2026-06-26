@@ -15,10 +15,21 @@
 {% include header.html %}
 
 <main>
-  <div class="plugin-hero">
-    {% if plugin.image and plugin.image != "" %}
-    <img src="{{ plugin.image | relative_url }}" alt="{{ plugin.name }}" class="plugin-hero-img">
-    {% endif %}
+  {% assign has_banner = false %}
+  {% if plugin.banner and plugin.banner != "" %}{% assign has_banner = true %}{% endif %}
+
+  {% if has_banner %}
+  <div class="plugin-banner">
+    <img src="{{ plugin.banner | relative_url }}" alt="{{ plugin.name }}" class="plugin-banner-img">
+  </div>
+  {% endif %}
+
+  <div class="plugin-hero{% if has_banner %} hero-stacked{% endif %}">
+    {% unless has_banner %}
+      {% if plugin.image and plugin.image != "" %}
+      <img src="{{ plugin.image | relative_url }}" alt="{{ plugin.name }}" class="plugin-hero-img">
+      {% endif %}
+    {% endunless %}
     <div class="plugin-hero-text">
       <div class="eyebrow">{{ plugin.status | upcase }}</div>
       <h1>{{ plugin.name }} <span class="ver">{{ plugin.version }}</span></h1>

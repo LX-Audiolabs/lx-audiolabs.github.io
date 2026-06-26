@@ -504,6 +504,20 @@ main .lead strong,
 
 /* ── Plugin Detail Page ──────────────── */
 
+.plugin-banner {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 0 0;
+}
+
+.plugin-banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
 .plugin-hero {
   display: flex;
   gap: 32px;
@@ -513,6 +527,12 @@ main .lead strong,
   padding: 36px 0 24px;
   text-align: left;
   align-items: flex-start;
+}
+
+/* Banner-Modus: Text steht unter dem Banner, volle Breite */
+.plugin-hero.hero-stacked {
+  flex-direction: column;
+  padding: 24px 0;
 }
 
 .plugin-hero-img {
