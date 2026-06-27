@@ -1,6 +1,6 @@
 - slug: aether
   name: Aether
-  version: v1.0.5
+  version: v1.0.6
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
@@ -40,7 +40,7 @@
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.2.4
+  version: v1.3.0
   tagline: >-
     Balance your master bus by frequency. Real-time spectral analysis meets surgical
     band-by-band EQ and stereo control — no mastering-grade compression, just precision correction.
@@ -89,7 +89,7 @@
 
 - slug: meridian
   name: Meridian
-  version: v1.4.2
+  version: v1.5.0
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
