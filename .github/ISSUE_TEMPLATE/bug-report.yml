@@ -3,6 +3,12 @@ description: Report a bug found in an LX Audiolabs beta plugin
 title: "[BUG] "
 labels: ["bug", "beta"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Before submitting:** Please [search existing issues](https://github.com/lxndrbe/lxndrbe.github.io/issues?q=is%3Aissue) (including closed ones) to see if this bug has already been reported.
+        > If you find it, add a comment there instead — duplicate reports slow things down. Thanks! 🙏
+
   - type: dropdown
     id: plugin
     attributes:
