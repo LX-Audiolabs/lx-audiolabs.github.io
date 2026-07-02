@@ -60,30 +60,6 @@
      fill="#9999bb"
      id="text1">built with</text>
   <!-- truce mark · interlocked sine waves -->
-  <g
-     transform="matrix(0.73602576,0,0,0.73602576,30.141773,40.496974)"
-     id="g2">
-    <path
-       d="m -26,-16 c 18,-14 34,-14 52,0 18,14 26,14 44,0"
-       fill="none"
-       stroke="#ff2d7b"
-       stroke-width="4.5"
-       stroke-linecap="round"
-       id="path1" />
-    <path
-       d="m -26,-16 c 18,14 34,14 52,0 18,-14 26,-14 44,0"
-       fill="none"
-       stroke="#14f0e0"
-       stroke-width="4.5"
-       stroke-linecap="round"
-       id="path2" />
-    <circle
-       cx="26"
-       cy="-16"
-       r="2"
-       fill="#f0e4d0"
-       id="circle2" />
-  </g>
   <!-- TRUCE wordmark -->
   <g
      id="g4"
@@ -118,5 +94,29 @@
        letter-spacing="1"
        fill="#f0e4d0"
        id="text4">TRUCE</text>
+  </g>
+  <g
+     id="g4-6"
+     transform="translate(-133.79781,0.40056264)">
+    <path
+       d="m 150,29 c 12,-11 18,-11 30,0 12,11 19,11 31,0"
+       fill="none"
+       stroke="#ff2d7b"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path1-9" />
+    <path
+       d="m 150,29 c 12,11 18,11 30,0 12,-11 19,-11 31,0"
+       fill="none"
+       stroke="#14f0e0"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path2-8" />
+    <circle
+       cx="180"
+       cy="29"
+       r="1.8"
+       fill="#f0e4d0"
+       id="circle2-7" />
   </g>
 </svg>
