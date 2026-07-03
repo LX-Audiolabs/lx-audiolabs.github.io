@@ -56,6 +56,17 @@ header {
 
 nav { display: flex; align-items: center; gap: 4px; }
 
+.truce-badge {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.truce-logo-h {
+  height: 24px;
+  width: auto;
+}
+
 nav a {
   color: var(--text-label);
   text-decoration: none;
@@ -268,7 +279,8 @@ main .lead strong,
 
 .plugin-card img {
   width: 120px;
-  height: auto;
+  height: 68px;
+  object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
 }

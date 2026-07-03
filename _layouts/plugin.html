@@ -51,8 +51,8 @@
       <div class="howto-install">
         <h3>How to install</h3>
         <ol>
-          <li>Download the <code>.clap</code> file for your platform</li>
-          <li>Copy it into your CLAP folder:
+          <li>Download the <code>.zip</code> file for your platform</li>
+          <li>Extract the <code>.clap</code> bundle and copy it into your CLAP folder:</li>
             <ul>
               <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
               <li><strong>Mac:</strong> <code>/Library/Audio/Plug-Ins/CLAP</code> or <code>~/Library/Audio/Plug-Ins/CLAP</code></li>
@@ -62,18 +62,19 @@
           </li>
           <li>Restart your DAW — or use its plugin reload/scan function</li>
         </ol>
-        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one and reload your DAW.</p>
+        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one from the ZIP and reload your DAW.</p>
       </div>
 
       <div class="system-reqs">
         <h3>System Requirements</h3>
         <table>
-          <tr><td><strong>Windows</strong></td><td>Windows 11 64-bit</td></tr>
-          <tr><td><strong>GPU</strong></td><td>DirectX 12 capable (any GPU from ~2012+)</td></tr>
-          <tr><td><strong>CPU</strong></td><td>x86-64, any modern CPU</td></tr>
+          <tr><td><strong>Windows</strong></td><td>Windows 11 64-bit (modern GPU required)</td></tr>
+          <tr><td><strong>macOS</strong></td><td>Apple Silicon (M1–M4), modern GPU</td></tr>
+          <tr><td><strong>Linux</strong></td><td>Modern distro with up-to-date graphics drivers (Mesa/Vulkan)</td></tr>
+          <tr><td><strong>GPU</strong></td><td>DirectX 12 / Vulkan / Metal — any GPU from ~2015+</td></tr>
           <tr><td><strong>DAW</strong></td><td>CLAP-compatible (Reaper, Bitwig, Studio One, FL Studio)</td></tr>
         </table>
-        <p class="sysreq-note">LX plugins use GPU-accelerated rendering (Iced + wgpu) for real-time spectrum and meter displays. These rely on Windows 11's window-manager integration — on Windows 10 the animated displays (spectrum, goniometer, meters) remain blank. Audio processing and static controls still work. <a href="/faq/#win10">Learn more in the FAQ</a>.</p>
+        <p class="sysreq-note"><strong>⚠ GPU required:</strong> LX plugins use GPU-accelerated rendering (Iced + wgpu) for real-time spectrum and meter displays. <strong>Old hardware will crash or show blank displays.</strong> Windows 10, old Intel Macs, and Linux on older GPUs (no Vulkan support) are <strong>not supported</strong>. <a href="/faq/#gpu" style="color: var(--amber)">Learn more in the FAQ</a>.</p>
       </div>
     </div>
     {% endif %}

@@ -1,6 +1,6 @@
 - slug: aether
   name: Aether
-  version: v1.0.7
+  version: v1.1.1
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
@@ -29,18 +29,18 @@
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
-    win: assets/releases/aether-win.clap
-    linux: assets/releases/aether-linux.clap
-    mac: assets/releases/aether-mac.clap
-  manual_url: ""
+    win: assets/releases/Aether-v1.1.1-win.zip
+    linux: assets/releases/Aether-v1.1.1-linux.zip
+    mac: assets/releases/Aether-v1.1.1-mac.zip
+  manual_url: "https://github.com/lxndrbe/lxndrbe.github.io/wiki/Aether"
   youtube_url: ""
-  image: assets/img/Aether-SC.png
-  banner: assets/img/Aether-banner.png
+  image: assets/img/aether-sc.jpg
+  banner: assets/img/Aether-banner.jpg
   status: stable
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.3.1
+  version: v1.4.2
   tagline: >-
     Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
     Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
@@ -78,18 +78,18 @@
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
-    win: assets/releases/equilibrium-win.clap
-    linux: assets/releases/equilibrium-linux.clap
-    mac: assets/releases/equilibrium-mac.clap
-  manual_url: ""
+    win: assets/releases/Equilibrium-v1.4.2-win.zip
+    linux: assets/releases/Equilibrium-v1.4.2-linux.zip
+    mac: assets/releases/Equilibrium-v1.4.2-mac.zip
+  manual_url: "https://github.com/lxndrbe/lxndrbe.github.io/wiki/Equilibrium"
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
-  image: assets/img/Equilibrum-SC.png
-  banner: assets/img/Equilibrum-banner.png
+  image: assets/img/equilibrium-sc.jpg
+  banner: assets/img/Equilibrum-banner.jpg
   status: stable
 
 - slug: meridian
   name: Meridian
-  version: v1.5.2
+  version: v1.7.3
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
@@ -117,7 +117,9 @@
     - "Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)"
     - "High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)"
     - "Soft-knee compressor (1.5–4.0:1 ratio, automatic knee, with GR envelope visualization)"
+    - "Compressor mini display — real-time gain reduction meter in the main UI"
     - "Parallel compression for transparent tone shaping (0–100% mix)"
+    - "Inflate — upward expansion for adding density, sustain, and body"
     - "Tube-style warmth saturation (DC-biased tanh, even harmonics — placed AFTER compressor)"
     - "Global stereo width control (0–200%, L/R matrix)"
     - "Real-time FFT spectrum (Blackman-Harris 4-term window, 1/3-octave smoothing)"
@@ -130,26 +132,32 @@
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
-    win: assets/releases/meridian-win.clap
-    linux: assets/releases/meridian-linux.clap
-    mac: assets/releases/meridian-mac.clap
-  manual_url: ""
+    win: assets/releases/Meridian-v1.7.3-win.zip
+    linux: assets/releases/Meridian-v1.7.3-linux.zip
+    mac: assets/releases/Meridian-v1.7.3-mac.zip
+  manual_url: "https://github.com/lxndrbe/lxndrbe.github.io/wiki/Meridian"
   youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
-  image: assets/img/Meridian-SC.png
-  banner: assets/img/Meridian-banner.png
+  image: assets/img/meridian-sc.jpg
+  banner: assets/img/Meridian-banner.jpg
   status: stable
 
 - slug: lucent
   name: Lucent
   version: coming soon
-  tagline: Transparent dynamics and clarity. Precision compressor with spectral awareness.
+  tagline: Spectral analyzer for resonances and frequency masking. With Relay for inter-plugin communication.
   description: >-
-    Lucent gives you transparent, musical dynamics control. A spectral-aware compressor
-    that respects the frequency balance of your material while taming peaks and enhancing clarity.
+    Lucent is a precision spectral analyzer that reveals <strong>resonances and frequency masking</strong>
+    in your mix. It visualizes where frequencies collide and overlap, helping you identify problematic
+    buildup before it becomes a mixing issue.
+    <br><br>
+    Paired with <strong>Lucent Relay</strong>, it enables inter-plugin communication — Lucent analyzes,
+    other LX plugins react. This creates a connected ecosystem where your analysis data flows between
+    plugins for smarter, faster decisions.
   features:
-    - "Spectral-aware compression"
-    - "Transparent peak limiting"
-    - "Auto-release based on material analysis"
+    - "Real-time spectral analysis with resonance detection"
+    - "Frequency masking visualization — see where tracks collide"
+    - "Lucent Relay IPC — analysis data shared across LX plugins"
+    - "GPU-accelerered waterfall and spectrum displays"
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
