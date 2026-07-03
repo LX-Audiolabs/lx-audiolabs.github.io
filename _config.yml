@@ -12,6 +12,9 @@ updates:
     text: >-
       Meridian v1.7.3, Equilibrium v1.4.2, Aether v1.1.1: Major updates with
       new features and fixes. Now available for Windows, Linux, and macOS.
+  - date: "2026-07-03"
+    text: >-
+      All plugins migrated from nice-plug to the Truce framework.
   
  
 
