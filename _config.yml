@@ -1,10 +1,10 @@
 # ── LX Audiolabs ─ Jekyll Config ──
 title: LX Audiolabs
-email: lxndrbe@proton.me
+email: contact@lx-audiolabs.com
 description: >-
   AI-first audio tools — CLAP plugins shaped by real producing & mastering workflows.
 baseurl: ""
-url: "https://lxndrbe.github.io"
+url: "https://lx-audiolabs.github.io"
 
 # Update Banner — newest first
 updates:
