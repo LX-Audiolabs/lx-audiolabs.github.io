@@ -14,7 +14,7 @@ permalink: /faq/
       <div class="q">Q: So many megabytes for such a small plugin — what's in there, lead?</div>
       <div class="a">
         Nope, pure graphics power! 🚀 These plugins use <strong>Rust</strong> and the
-        <strong>Iced</strong> framework with <strong>wgpu</strong> on board — a tiny portable graphics
+        <strong>Vizia</strong> framework with <strong>Skia + OpenGL</strong> on board — a portable 2D graphics
         engine that lives inside the plugin. It brings its own cinema instead of relying on your
         operating system's wobbly folding chairs. The first 3–4 MB are reserved for the red carpet,
         lighting rig, and popcorn machine. Everything beyond that is actual audio magic. 🍿😎
@@ -72,20 +72,20 @@ permalink: /faq/
     </div>
 
     <div class="faq-item" id="gpu">
-      <div class="q">Q: Why do the plugins require a modern GPU? Do they work on older hardware?</div>
+      <div class="q">Q: Why do the plugins need a GPU? Do they work on older hardware?</div>
       <div class="a">
-        <strong>Modern GPU is mandatory.</strong> LX plugins use GPU-accelerated rendering (Iced + wgpu)
-        for real-time spectrum analyzers, goniometers, and meters. This requires a GPU that supports
-        <strong>DirectX 12, Vulkan, or Metal</strong> — any GPU from ~2015 or newer (Intel HD 500 series,
-        NVIDIA GTX 900 series, AMD GCN 4th gen, Apple M1+).<br><br>
+        <strong>OpenGL 3.0+ GPU required.</strong> LX plugins use GPU-accelerated rendering (Vizia + OpenGL/Skia)
+        for real-time spectrum analyzers, goniometers, and meters. OpenGL 3.0 is nearly universal —
+        any GPU from <strong>~2008 or newer</strong> works (NVIDIA GeForce 8 series, Intel HD Graphics,
+        AMD Radeon HD 2000 series, Apple M1+).<br><br>
         <strong>What does NOT work:</strong><br>
-        • <strong>Windows 10:</strong> Animated displays (spectrum, goniometer, meters) appear blank.
-        Audio processing and static controls still function, but the visual feedback is gone.<br>
-        • <strong>Old Intel Macs:</strong> Not supported. Apple Silicon (M1–M4) required.<br>
-        • <strong>Linux on old hardware:</strong> If your GPU doesn't support Vulkan or Mesa drivers
-        are outdated, plugins will crash on load or show blank displays.<br><br>
-        <strong>If your DAW crashes on plugin load:</strong> your GPU or graphics drivers are too old.
-        There is no software fallback — the GPU pipeline is required.
+        • <strong>Remote Desktop / VM without GPU passthrough:</strong> Hardware OpenGL is unavailable.
+        The plugin editor won't open, but the DAW and audio processing continue normally — no crash.<br>
+        • <strong>Extremely old GPUs (pre-2008):</strong> May not support OpenGL 3.0. The editor will
+        refuse to open gracefully.<br>
+        • <strong>Old Intel Macs:</strong> Not supported. Apple Silicon (M1–M4) required.<br><br>
+        <strong>No crash risk:</strong> If your GPU or drivers don't support OpenGL 3.0, the plugin's
+        editor simply stays closed — your DAW keeps running and audio passes through unaffected.
       </div>
     </div>
 
