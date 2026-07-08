@@ -27,7 +27,7 @@
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nice-plug, Iced, wgpu)
+    language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/aether-v1.2.2-win.zip
     linux: releases/aether-v1.2.2-linux.zip
@@ -76,7 +76,7 @@
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nice-plug, Iced, wgpu)
+    language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/equilibrium-v1.6.5-win.zip
     linux: releases/equilibrium-v1.6.5-linux.zip
@@ -130,7 +130,7 @@
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nice-plug, Iced, wgpu)
+    language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/meridian-v1.9.3-win.zip
     linux: releases/meridian-v1.9.3-linux.zip
@@ -161,7 +161,7 @@
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nice-plug, Iced, wgpu)
+    language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: "#"
     mac: "#"

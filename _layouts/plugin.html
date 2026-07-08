@@ -68,13 +68,13 @@
       <div class="system-reqs">
         <h3>System Requirements</h3>
         <table>
-          <tr><td><strong>Windows</strong></td><td>Windows 11 64-bit (modern GPU required)</td></tr>
-          <tr><td><strong>macOS</strong></td><td>Apple Silicon (M1–M4), modern GPU</td></tr>
-          <tr><td><strong>Linux</strong></td><td>Modern distro with up-to-date graphics drivers (Mesa/Vulkan)</td></tr>
-          <tr><td><strong>GPU</strong></td><td>DirectX 12 / Vulkan / Metal — any GPU from ~2015+</td></tr>
+          <tr><td><strong>Windows</strong></td><td>Windows 11 64-bit (OpenGL 3.0+)</td></tr>
+          <tr><td><strong>macOS</strong></td><td>Apple Silicon (M1–M4), OpenGL 3.0+</td></tr>
+          <tr><td><strong>Linux</strong></td><td>Modern distro with OpenGL 3.0+ drivers (Mesa)</td></tr>
+          <tr><td><strong>GPU</strong></td><td>OpenGL 3.0+ — any GPU from ~2008+</td></tr>
           <tr><td><strong>DAW</strong></td><td>CLAP-compatible (Reaper, Bitwig, Studio One, FL Studio)</td></tr>
         </table>
-        <p class="sysreq-note"><strong>⚠ GPU required:</strong> LX plugins use GPU-accelerated rendering (Iced + wgpu) for real-time spectrum and meter displays. <strong>Old hardware will crash or show blank displays.</strong> Windows 10, old Intel Macs, and Linux on older GPUs (no Vulkan support) are <strong>not supported</strong>. <a href="/faq/#gpu" style="color: var(--amber)">Learn more in the FAQ</a>.</p>
+        <p class="sysreq-note"><strong>GPU-accelerated UI:</strong> Vizia + OpenGL (Skia rendering). OpenGL 3.0 support is near-universal — any GPU since ~2008 works. Bei fehlendem HW-OpenGL (Remote Desktop, VM ohne GPU-Passthrough) startet der Editor nicht, aber die DAW und Audio laufen normal weiter. <a href="/faq/#gpu" style="color: var(--amber)">Mehr dazu in den FAQ</a>.</p>
       </div>
     </div>
     {% endif %}
