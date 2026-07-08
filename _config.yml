@@ -8,13 +8,14 @@ url: "https://lx-audiolabs.github.io"
 
 # Update Banner — newest first
 updates:
-  - date: "2026-07-03"
+  - date: "2026-07-08"
     text: >-
-      Meridian v1.7.3, Equilibrium v1.4.2, Aether v1.1.1: Major updates with
-      new features and fixes. Now available for Windows, Linux, and macOS.
-  - date: "2026-07-03"
+      Meridian v1.9.3, Equilibrium v1.6.5, Aether v1.2.2: Neue Versionen mit
+      verbessertem DSP, optimierter CPU-Last und Bugfixes. Jetzt für Windows, Linux und macOS.
+  - date: "2026-07-04"
     text: >-
-      All plugins migrated from nice-plug to the Truce framework.
+      Alle Plugins auf Truce + Vizia migriert — neues UI-Framework mit GPU-beschleunigtem
+      Rendering, schnellerer Startup und native CLAP-Integration. Kein nice-plug/Iced mehr.
   
  
 
