@@ -3,7 +3,9 @@
 This is the public issue tracker for **LX Audiolabs CLAP plugins**.  
 The actual website lives at **[lxndrbe.github.io](https://lxndrbe.github.io)**.
 
-<img src="assets/img/built-with-truce-horizontal.png" alt="Built with truce" width="180" align="right">
+<a href="https://truce.audio/" target="_blank" rel="noopener">
+  <img src="https://truce.audio/branding/built-with-truce-dark.svg" alt="Built with Truce" height="42">
+</a>
 
 ## 🐛 Report a Bug
 

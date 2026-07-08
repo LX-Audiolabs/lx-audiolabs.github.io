@@ -34,6 +34,7 @@ body {
 /* ── Header ────────────────────────────── */
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +58,10 @@ header {
 nav { display: flex; align-items: center; gap: 4px; }
 
 .truce-badge {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
 }
