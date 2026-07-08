@@ -40,7 +40,7 @@
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.6.5
+  version: v1.6.6
   tagline: >-
     Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
     Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
@@ -78,9 +78,9 @@
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia, OpenGL)
   downloads:
-    win: releases/equilibrium-v1.6.5-win.zip
-    linux: releases/equilibrium-v1.6.5-linux.zip
-    mac: releases/equilibrium-v1.6.5-macos.zip
+    win: releases/equilibrium-v1.6.6-win.zip
+    linux: releases/equilibrium-v1.6.6-linux.zip
+    mac: releases/equilibrium-v1.6.6-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Equilibrium"
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/equilibrium-sc.jpg
