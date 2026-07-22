@@ -159,7 +159,7 @@
     - "Lucent Relay SHM — multi-instance spectrum share across tracks"
     - "SNAP export of session max-hold resonance and masking"
   tech:
-    format: CLAP
+    format: "CLAP, LV2"
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia)
   downloads:
