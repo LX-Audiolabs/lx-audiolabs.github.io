@@ -144,27 +144,48 @@
 - slug: lucent
   name: Lucent
   version: "1.0.0"
-  tagline: Spectral analyzer for resonances and frequency masking. With Relay for inter-plugin communication.
+  tagline: >-
+    Multi-track spectral analyzer. Detect resonances, visualize frequency masking,
+    and share spectra across tracks via Relay.
   description: >-
-    Lucent is a precision spectral analyzer that reveals <strong>resonances and frequency masking</strong>
-    in your mix. It visualizes where frequencies collide and overlap, helping you identify problematic
-    buildup before it becomes a mixing issue.
+    Lucent is a <strong>multi-track spectral analyzer</strong> built for precision mixing.
+    It renders a high-resolution FFT spectrum
+    (Blackman-Harris 4-term window, 16 Ki FFT, 1/3-octave smoothing) with
+    <strong>resonance peak detection</strong> and <strong>frequency masking overlays</strong> — see exactly where
+    tracks collide and buildup before it becomes a problem.
     <br><br>
-    Paired with <strong>Lucent Relay</strong>, it enables inter-plugin communication across tracks —
-    each Relay publishes FFT spectra into shared memory; Lucent aggregates them for group-level
-    resonance and masking analysis, plus SNAP vault export for session notes.
+    Paired with <strong>Lucent Relay</strong> (included in the download), it enables
+    <strong>inter-plugin spectrum sharing</strong> across tracks. Place Relay on any track to publish its
+    FFT into a shared-memory ring buffer; Lucent aggregates spectra from all Relays in the
+    session for group-level resonance comparison, masking analysis, and
+    <strong>SNAP vault export</strong> — a structured Markdown snapshot of session max-hold
+    resonance and masking data, ready for AI-assisted feedback.
+    <br><br>
+    Relay itself is a <strong>zero-latency pass-through</strong> — it publishes spectral data
+    without touching your audio. Lucent and Relay communicate over a lock-free SHM ring buffer
+    keyed by track name; multiple Lucent instances can independently subscribe to different
+    Relay feeds. Built for producers who want to <strong>see their mix</strong> without context-switching
+    between tools.
   features:
-    - "Real-time spectral analysis with resonance detection"
-    - "Frequency masking visualization — see where tracks collide"
-    - "Lucent Relay SHM — multi-instance spectrum share across tracks"
-    - "SNAP export of session max-hold resonance and masking"
+    - "High-resolution FFT spectrum (16 Ki, Blackman-Harris 4-term, 1/3-octave smoothing)"
+    - "Resonance peak detection with visual markers and hover tooltips"
+    - "Frequency masking overlay — compare two spectra to see collision zones"
+    - "Lucent Relay — SHM spectrum publisher (zero-latency pass-through, included)"
+    - "Multi-instance Relay aggregation — compare spectra from multiple tracks simultaneously"
+    - "Max-hold + decay envelope with adjustable hold time"
+    - "SNAP export — structured Markdown snapshot of session max-hold resonance + masking"
+    - "Preset persistence with automatic load-on-launch"
+    - "Zero-latency DSP — Lucent analyzes only, never touches your audio stream"
   tech:
     format: "CLAP, LV2"
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia)
+    language: Rust (Truce, Vizia, OpenGL)
   downloads:
-    win: "#"
-    mac: "#"
-    linux: "#"
+    win: releases/lucent-v1.0.0-win.zip
+    mac: releases/lucent-v1.0.0-macos.zip
+    linux: releases/lucent-v1.0.0-linux.zip
+  manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
+  youtube_url: ""
   image: ""
+  banner: ""
   status: stable
