@@ -26,7 +26,7 @@
     - "Zero-latency monitoring DSP"
   tech:
     format: CLAP
-    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/aether-v1.2.8-win.zip
@@ -75,7 +75,7 @@
     - "Mono and Delta monitoring modes for diagnostic analysis"
   tech:
     format: CLAP
-    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/equilibrium-v1.6.11-win.zip
@@ -129,7 +129,7 @@
     - "Zero-latency processing with denormal protection"
   tech:
     format: CLAP
-    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/meridian-v1.9.8-win.zip
@@ -178,7 +178,7 @@
     - "Zero-latency DSP — Lucent analyzes only, never touches your audio stream"
   tech:
     format: "CLAP, LV2"
-    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (Truce, Vizia, OpenGL)
   downloads:
     win: releases/lucent-v1.0.0-win.zip
