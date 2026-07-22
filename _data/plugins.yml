@@ -143,28 +143,28 @@
 
 - slug: lucent
   name: Lucent
-  version: coming soon
+  version: "1.0.0"
   tagline: Spectral analyzer for resonances and frequency masking. With Relay for inter-plugin communication.
   description: >-
     Lucent is a precision spectral analyzer that reveals <strong>resonances and frequency masking</strong>
     in your mix. It visualizes where frequencies collide and overlap, helping you identify problematic
     buildup before it becomes a mixing issue.
     <br><br>
-    Paired with <strong>Lucent Relay</strong>, it enables inter-plugin communication — Lucent analyzes,
-    other LX plugins react. This creates a connected ecosystem where your analysis data flows between
-    plugins for smarter, faster decisions.
+    Paired with <strong>Lucent Relay</strong>, it enables inter-plugin communication across tracks —
+    each Relay publishes FFT spectra into shared memory; Lucent aggregates them for group-level
+    resonance and masking analysis, plus SNAP vault export for session notes.
   features:
     - "Real-time spectral analysis with resonance detection"
     - "Frequency masking visualization — see where tracks collide"
-    - "Lucent Relay IPC — analysis data shared across LX plugins"
-    - "GPU-accelerered waterfall and spectrum displays"
+    - "Lucent Relay SHM — multi-instance spectrum share across tracks"
+    - "SNAP export of session max-hold resonance and masking"
   tech:
     format: CLAP
     platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia, OpenGL)
+    language: Rust (Truce, Vizia)
   downloads:
     win: "#"
     mac: "#"
     linux: "#"
   image: ""
-  status: upcoming
+  status: stable
