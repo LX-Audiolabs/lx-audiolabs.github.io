@@ -10,14 +10,16 @@ url: "https://lx-audiolabs.github.io"
 updates:
   - date: "2026-07-22"
     text: >-
+      NEW Plugin: Lucent v1.0.0 — a resonance detection and frequency masking analyser for multi-track mixing.
+      Now available for Linux, macOS, and Windows.
+  - date: "2026-07-22"
+    text: >-
       Meridian v1.9.8, Equilibrium v1.6.11, Aether v1.2.8: New releases with
       some minor bugfixes: copy&paste + presetmanagement improvements.
   - date: "2026-07-04"
     text: >-
       All plugins migrated to Truce + Vizia — new UI framework with GPU-accelerated
       rendering, faster startup, and native CLAP integration. No more nice-plug/Iced.
-  
- 
 
 # Social
 discord: https://discord.gg/ew6kPtdDJ6
