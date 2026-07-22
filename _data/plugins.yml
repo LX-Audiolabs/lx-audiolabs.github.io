@@ -186,6 +186,6 @@
     linux: releases/lucent-v1.0.0-linux.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
   youtube_url: ""
-  image: ""
-  banner: ""
+  image: assets/img/lucent-sc.jpg
+  banner: assets/img/Lucent-banner.jpg
   status: stable
