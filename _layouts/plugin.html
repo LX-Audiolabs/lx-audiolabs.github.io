@@ -1,0 +1,151 @@
+<!---
+  plugin.html — Volle Plugin-Detailseite
+  Frontmatter: layout: plugin, plugin: <slug>
+  Holt Daten aus _data/plugins.yml
+--->
+{% assign plugin = site.data.plugins | where: "slug", page.plugin | first %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+
+{% include header.html %}
+
+<main>
+  {% assign has_banner = false %}
+  {% if plugin.banner and plugin.banner != "" %}{% assign has_banner = true %}{% endif %}
+
+  {% if has_banner %}
+  <div class="plugin-banner">
+    <img src="{{ plugin.banner | relative_url }}" alt="{{ plugin.name }}" class="plugin-banner-img">
+  </div>
+  {% endif %}
+
+  <div class="plugin-hero{% if has_banner %} hero-stacked{% endif %}">
+    {% unless has_banner %}
+      {% if plugin.image and plugin.image != "" %}
+      <img src="{{ plugin.image | relative_url }}" alt="{{ plugin.name }}" class="plugin-hero-img">
+      {% endif %}
+    {% endunless %}
+    <div class="plugin-hero-text">
+      <div class="eyebrow">{{ plugin.status | upcase }}</div>
+      <h1>{{ plugin.name }} <span class="ver">{{ plugin.version }}</span></h1>
+      <p class="lead">{{ plugin.description }}</p>
+    </div>
+  </div>
+
+  <div class="plugin-content">
+
+    {% if plugin.downloads and plugin.status != "upcoming" %}
+    <div class="plugin-downloads">
+      <div class="support-box">
+        <p>No license, no paywall — just free tools.</p>
+        <p>
+          If you want to help and support this project,
+          <a href="{{ site.github_sponsor }}" target="_blank" rel="noopener">sponsor us on GitHub</a>
+          or
+          <a href="{{ site.buymeacoffee }}" target="_blank" rel="noopener">buy us a coffee</a>.
+        </p>
+      </div>
+
+      <h2 class="download-heading">Download</h2>
+      <div class="dl-row">
+        <a href="{{ plugin.downloads.win | relative_url }}" class="dl-btn large">Windows</a>
+        <a href="{{ plugin.downloads.linux | relative_url }}" class="dl-btn large">Linux</a>
+        <a href="{{ plugin.downloads.mac | relative_url }}" class="dl-btn large">Mac</a>
+      </div>
+      <p class="dl-note">Mac builds are for <strong>Apple Silicon</strong> (M1–M4). Intel Macs not supported.</p>
+      <div class="howto-install">
+        <h3>How to install</h3>
+        <ol>
+          <li>Download the <code>.zip</code> file for your platform</li>
+          <li>Extract the <code>.clap</code> bundle and copy it into your CLAP folder:</li>
+            <ul>
+              <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
+              <li><strong>Mac:</strong> <code>/Library/Audio/Plug-Ins/CLAP</code> or <code>~/Library/Audio/Plug-Ins/CLAP</code></li>
+              <li><strong>Linux:</strong> <code>~/.clap</code></li>
+              <li>Or create your own folder and add it in your DAW's plugin settings</li>
+            </ul>
+          </li>
+          <li>Restart your DAW — or use its plugin reload/scan function</li>
+        </ol>
+        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one from the ZIP and reload your DAW.</p>
+      </div>
+
+      <div class="system-reqs">
+        <h3>System Requirements</h3>
+        <table>
+          <tr><td><strong>Windows</strong></td><td>Windows 10/11 64-bit (OpenGL 3.0+)</td></tr>
+          <tr><td><strong>macOS</strong></td><td>Apple Silicon (M1–M4), OpenGL 3.0+</td></tr>
+          <tr><td><strong>Linux</strong></td><td>Modern distro with OpenGL 3.0+ drivers (Mesa)</td></tr>
+          <tr><td><strong>GPU</strong></td><td>OpenGL 3.0+ — any GPU from ~2008+</td></tr>
+          <tr><td><strong>DAW</strong></td><td>CLAP-compatible (Reaper, Bitwig, Studio One, FL Studio)</td></tr>
+        </table>
+        <p class="sysreq-note"><strong>GPU-accelerated UI:</strong> Vizia + OpenGL (Skia rendering). OpenGL 3.0 support is near-universal — any GPU since ~2008 works. If hardware OpenGL is unavailable (Remote Desktop, VM without GPU passthrough), the editor won't open, but the DAW and audio processing continue normally. <a href="/faq/#gpu" style="color: var(--amber)">Learn more in the FAQ</a>.</p>
+      </div>
+    </div>
+    {% endif %}
+<br>
+    <div class="plugin-features">
+      <h2>Features</h2>
+      <ul>
+        {% for feature in plugin.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+<br>
+    <div class="plugin-tech">
+      <h2>Technical</h2>
+      <dl>
+        <dt>Format</dt><dd>{{ plugin.tech.format }}</dd>
+        <dt>Platforms</dt><dd>{{ plugin.tech.platforms }}</dd>
+        <dt>Language</dt><dd>{{ plugin.tech.language }}</dd>
+      </dl>
+    </div>
+<br>
+    <div class="plugin-links">
+      <h2>Resources</h2>
+      <div class="resource-links">
+        {% if plugin.manual_url and plugin.manual_url != "" %}
+        <a href="{{ plugin.manual_url }}" target="_blank" rel="noopener" class="resource-btn">📖 User Manual</a>
+        {% else %}
+        <span class="resource-btn disabled">📖 User Manual — coming soon</span>
+        {% endif %}
+        {% if plugin.youtube_url and plugin.youtube_url != "" %}
+        <a href="{{ plugin.youtube_url }}" target="_blank" rel="noopener" class="resource-btn">▶ Watch on YouTube</a>
+        {% else %}
+        <span class="resource-btn disabled">▶ Walkthrough Video — coming soon</span>
+        {% endif %}
+      </div>
+    </div>
+<br>
+    <div class="plugin-snap">
+      <h2>SNAP — AI Analysis</h2>
+      <p>
+        {{ plugin.name }} ships with <strong>SNAP</strong>: export your complete plugin state —
+        spectrum, band levels, parameters — as a structured markdown snapshot.
+        Feed that into ChatGPT, Claude, or any LLM for analysis, suggestions,
+        or a second opinion on your mix.
+      </p>
+      <p>
+        SNAP saves the snapshot as a <code>.md</code> (Markdown) file in your plugin's vault folder.
+        To read it, use any Markdown reader — we recommend
+        <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a>
+        for the best experience.
+      </p>
+    </div>
+  </div>
+<br>
+  <div class="back-link">
+    <a href="{{ '/' | relative_url }}">← All Plugins</a>
+  </div>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

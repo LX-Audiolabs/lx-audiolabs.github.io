@@ -1,0 +1,191 @@
+- slug: aether
+  name: Aether
+  version: v1.2.8
+  tagline: >-
+    Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
+  description: >-
+    Aether transforms headphones into precise mixing monitors. It applies a <strong>frequency-corrected Harman curve</strong>
+    matched to typical headphone response, letting you hear your mix translate accurately to speakers. Its spatial
+    <strong>crossfeed engine</strong> simulates stereo imaging and room acoustics on headphones — three realism modes
+    (Standard / Lifelike / Hyperrealistic) let you dial in the right amount of "room feel" for your workflow.
+    <br><br>
+    A <strong>5-band Harman EQ</strong> with independent band types gives you surgical control over the correction curve. The crossfeed
+    angle (30°–75° virtual speaker width) and amount controls let you match your headphone acoustics precisely.
+    <strong>Real-time EQ graph</strong>, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
+    <br><br>
+    Designed for use as a <strong>monitoring-chain plugin</strong> (not for mastering print), Aether sits post-master where its spatial
+    simulation and headphone correction enhance your mixing decisions without coloring the mix you render.
+  features:
+    - "5-band Harman EQ with type-flexible bands (Off/LowShelf/Peak/HighShelf)"
+    - "Spatial crossfeed simulation with 3 realism modes (Standard/Lifelike/Hyperrealistic)"
+    - "Adjustable virtual speaker angle (30°–75°) with dynamic head-shadow LPF"
+    - "Read-only EQ curve visualization (Amber transfer-function overlay)"
+    - "Manual AutoEQ.app value entry — copy FREQ/GAIN/Q from AutoEQ"
+    - "Preset persistence with automatic load-on-launch"
+    - "Input peak metering with peak hold"
+    - "Zero-latency monitoring DSP"
+  tech:
+    format: CLAP
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
+    language: Rust (Truce, Vizia, OpenGL)
+  downloads:
+    win: releases/aether-v1.2.8-win.zip
+    linux: releases/aether-v1.2.8-linux.zip
+    mac: releases/aether-v1.2.8-macos.zip
+  manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Aether"
+  youtube_url: ""
+  image: assets/img/aether-sc.jpg
+  banner: assets/img/Aether-banner.jpg
+  status: stable
+
+- slug: equilibrium
+  name: Equilibrium
+  version: v1.6.11
+  tagline: >-
+    Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
+    Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
+  description: >-
+    Equilibrium is your spectral balancer for the master bus.
+    It splits the frequency spectrum into five independent bands — Sub, Bass, Mid, Hi-Mid,
+    Presence — each with its own EQ, stereo width, and pan control. Band-Indikator-Bars
+    show you exactly what's happening across your mix in zero-latency processing, eliminating
+    guesswork and delivering surgical precision.
+    <br><br>
+    Unlike traditional parametric EQs that require you to hunt for the right frequency,
+    Equilibrium uses <strong>band-based design</strong>: you see the problematic frequency range,
+    measure its deviation from target, and adjust gain, stereo width, or pan directly above that
+    band's visualization. The integrated analysis and control promotes fast, accurate
+    mixing decisions without context-switching between windows.
+    <br><br>
+    Purpose-built for <strong>pre-mastering balance</strong>, Equilibrium corrects mix
+    imbalances, tightens stereo imagery, and prepares your mix for the mastering chain.
+    Export your plugin state via SNAP and feed it into any AI for feedback —
+    this is the <strong>AI-First</strong> approach to mixing.
+  features:
+    - "5-band crossover equalizer with Band-Indikator-Bars (energy columns, not FFT spectrum)"
+    - "Independent stereo width control per band (mono to 150% width)"
+    - "Configurable Mono Floor (side high-pass filter, 0–300 Hz)"
+    - "Phase Correlation metering and L/R balance display"
+    - "Auto Gain Compensation to maintain consistent output level during EQ adjustments"
+    - "Pre-Master Static Gain Correction with configurable target peak (−6 to −3 dB)"
+    - "Goniometer scope visualization with auto-scaling envelope follower"
+    - "SNAP export — structured Markdown snapshot for AI-assisted analysis and feedback"
+    - "Zero-latency processing with static pre-master gain correction"
+    - "GPU-accelerated Iced/wgpu UI with responsive band visualization"
+    - "Mono and Delta monitoring modes for diagnostic analysis"
+  tech:
+    format: CLAP
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
+    language: Rust (Truce, Vizia, OpenGL)
+  downloads:
+    win: releases/equilibrium-v1.6.11-win.zip
+    linux: releases/equilibrium-v1.6.11-linux.zip
+    mac: releases/equilibrium-v1.6.11-macos.zip
+  manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Equilibrium"
+  youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
+  image: assets/img/equilibrium-sc.jpg
+  banner: assets/img/Equilibrum-banner.jpg
+  status: stable
+
+- slug: meridian
+  name: Meridian
+  version: v1.9.8
+  tagline: >-
+    Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
+    analog saturation in one focused workflow. With spectral visualization to guide every move.
+  description: >-
+    Meridian is a channel shaper built for tracks and group channels that need both surgical EQ
+    and character. It combines a 5-band parametric EQ with variable frequencies, a soft-knee
+    compressor, and analog-style saturation in a purpose-built signal flow.
+    <br><br>
+    Unlike traditional mixing chains that separate tonal shaping from dynamic control,
+    Meridian uses an <strong>intentional hybrid approach</strong>: exciter before compressor,
+    saturation after. The compressor <em>reacts to</em> the harmonics you create with the
+    exciter — resulting in denser, more organic glue. Saturation then adds warmth on top,
+    subtly coloring the already-shaped dynamics. The result is neither overprocessed nor
+    sterile — just focused shaping that <strong>stacks intelligently</strong>.
+    <br><br>
+    Every move is visualized in real-time: a 1/3-octave-smoothed FFT spectrum shows your mix
+    after processing, with an <strong>amber EQ-curve overlay</strong> displaying the exact
+    effect of each band. Phase correlation and goniometer monitoring ensure your stereo image
+    stays tight and intentional. Solo bands to isolate problem frequencies, and export your
+    settings as a structured Markdown snapshot for <strong>AI-assisted feedback</strong> and
+    iteration — this is mixing that shows its work.
+  features:
+    - "5-band parametric EQ with variable frequencies (Bass, Lo-Mid, Mid, Hi-Mid, High)"
+    - "Per-band slope selection (A/B/C: gentle / medium / steep)"
+    - "Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)"
+    - "High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)"
+    - "Soft-knee compressor (1.5–4.0:1 ratio, automatic knee, with GR envelope visualization)"
+    - "Compressor mini display — real-time gain reduction meter in the main UI"
+    - "Parallel compression for transparent tone shaping (0–100% mix)"
+    - "Inflate — upward expansion for adding density, sustain, and body"
+    - "Tube-style warmth saturation (DC-biased tanh, even harmonics — placed AFTER compressor)"
+    - "Global stereo width control (0–200%, L/R matrix)"
+    - "Real-time FFT spectrum (Blackman-Harris 4-term window, 1/3-octave smoothing)"
+    - "Amber EQ curve overlay showing exact band response"
+    - "Stereo phase correlation meter and goniometer visualization"
+    - "SNAP export — structured Markdown snapshot for AI feedback"
+    - "Zero-latency processing with denormal protection"
+  tech:
+    format: CLAP
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
+    language: Rust (Truce, Vizia, OpenGL)
+  downloads:
+    win: releases/meridian-v1.9.8-win.zip
+    linux: releases/meridian-v1.9.8-linux.zip
+    mac: releases/meridian-v1.9.8-macos.zip
+  manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Meridian"
+  youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
+  image: assets/img/meridian-sc.jpg
+  banner: assets/img/Meridian-banner.jpg
+  status: stable
+
+- slug: lucent
+  name: Lucent
+  version: "1.0.0"
+  tagline: >-
+    Multi-track spectral analyzer. Detect resonances, visualize frequency masking,
+    and share spectra across tracks via Relay.
+  description: >-
+    Lucent is a <strong>multi-track spectral analyzer</strong> built for precision mixing.
+    It renders a high-resolution FFT spectrum
+    (Blackman-Harris 4-term window, 16 Ki FFT, 1/3-octave smoothing) with
+    <strong>resonance peak detection</strong> and <strong>frequency masking overlays</strong> — see exactly where
+    tracks collide and buildup before it becomes a problem.
+    <br><br>
+    Paired with <strong>Lucent Relay</strong> (included in the download), it enables
+    <strong>inter-plugin spectrum sharing</strong> across tracks. Place Relay on any track to publish its
+    FFT into a shared-memory ring buffer; Lucent aggregates spectra from all Relays in the
+    session for group-level resonance comparison, masking analysis, and
+    <strong>SNAP vault export</strong> — a structured Markdown snapshot of session max-hold
+    resonance and masking data, ready for AI-assisted feedback.
+    <br><br>
+    Relay itself is a <strong>zero-latency pass-through</strong> — it publishes spectral data
+    without touching your audio. Lucent and Relay communicate over a lock-free SHM ring buffer
+    keyed by track name; multiple Lucent instances can independently subscribe to different
+    Relay feeds. Built for producers who want to <strong>see their mix</strong> without context-switching
+    between tools.
+  features:
+    - "High-resolution FFT spectrum (16 Ki, Blackman-Harris 4-term, 1/3-octave smoothing)"
+    - "Resonance peak detection with visual markers and hover tooltips"
+    - "Frequency masking overlay — compare two spectra to see collision zones"
+    - "Lucent Relay — SHM spectrum publisher (zero-latency pass-through, included)"
+    - "Multi-instance Relay aggregation — compare spectra from multiple tracks simultaneously"
+    - "Max-hold + decay envelope with adjustable hold time"
+    - "SNAP export — structured Markdown snapshot of session max-hold resonance + masking"
+    - "Preset persistence with automatic load-on-launch"
+    - "Zero-latency DSP — Lucent analyzes only, never touches your audio stream"
+  tech:
+    format: "CLAP, LV2"
+    platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
+    language: Rust (Truce, Vizia, OpenGL)
+  downloads:
+    win: releases/lucent-v1.0.0-win.zip
+    mac: releases/lucent-v1.0.0-macos.zip
+    linux: releases/lucent-v1.0.0-linux.zip
+  manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
+  youtube_url: ""
+  image: assets/img/lucent-sc.jpg
+  banner: assets/img/Lucent-banner.jpg
+  status: stable

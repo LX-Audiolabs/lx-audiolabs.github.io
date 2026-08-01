@@ -1,0 +1,57 @@
+---
+layout: default
+title: Home
+---
+
+<main class="home">
+  <!-- INTRO -->
+  <section class="home-intro">
+    <div class="eyebrow">AI-first audio tools</div>
+    <h1>Built from <span class="accent">real</span> producing &amp; mastering workflows.</h1>
+  </section>
+
+  <!-- FEATURED: Lucent -->
+  <section class="hero-plugin" id="lucent">
+    <a href="{{ '/plugins/lucent/' | relative_url }}" class="hero-plugin__link">
+      <div class="hero-plugin__image-wrapper">
+        <img src="{{ '/assets/img/Lucent-banner.jpg' | relative_url }}" alt="Lucent v1.0.0" class="hero-plugin__image">
+        <span class="hero-plugin__badge">NEW v1.0.0</span>
+      </div>
+      <div class="hero-plugin__content">
+        <h2 class="hero-plugin__title">Lucent</h2>
+        <p class="hero-plugin__subtitle">Resonance Detection &amp; Frequency Masking Analyser</p>
+        <p class="hero-plugin__desc">
+          Multi-track spectral analyzer for precision mixing. Detect resonances, visualize frequency masking,
+          and share spectra across tracks via Lucent Relay — now available for Linux, macOS, and Windows.
+        </p>
+        <span class="hero-plugin__cta">View Details →</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ALL PLUGINS GRID -->
+  <section class="plugin-section" id="plugins">
+    <h2 class="section-title">All Plugins</h2>
+
+    <div class="plugin-grid home-grid">
+      {% for plugin in site.data.plugins %}
+        {% unless plugin.slug == 'lucent' %}
+          {% include plugin-card-home.html plugin=plugin %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- LATEST UPDATES -->
+  <section class="news-section" id="updates">
+    <h2 class="section-title">Latest Updates</h2>
+    <ul class="news-list">
+      {% for update in site.updates limit:3 %}
+      <li>
+        <span class="news-date">{{ update.date }}</span>
+        <span class="news-text">{{ update.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>

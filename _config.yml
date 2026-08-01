@@ -1,0 +1,42 @@
+# ── LX Audiolabs ─ Jekyll Config ──
+title: LX Audiolabs
+email: contact@lx-audiolabs.com
+description: >-
+  AI-first audio tools — CLAP plugins shaped by real producing & mastering workflows.
+baseurl: ""
+url: "https://lx-audiolabs.github.io"
+
+# Update Banner — newest first
+updates:
+  - date: "2026-07-22"
+    text: "NEW Plugin: Lucent v1.0.0 — a resonance detection and frequency masking analyser for multi-track mixing. Now available for Linux, macOS, and Windows."
+  - date: "2026-07-22"
+    text: "Meridian v1.9.8, Equilibrium v1.6.11, Aether v1.2.8: New releases with some minor bugfixes: copy&paste + presetmanagement improvements."
+  - date: "2026-07-04"
+    text: "All plugins migrated to Truce + Vizia — new UI framework with GPU-accelerated rendering, faster startup, and native CLAP integration. No more nice-plug/Iced."
+
+# Social
+discord: https://discord.gg/ew6kPtdDJ6
+youtube: https://www.youtube.com/@lxndrbe
+github_sponsor: https://github.com/sponsors/lxndrbe
+buymeacoffee: https://buymeacoffee.com/lxndrbe
+facebook: https://www.facebook.com/LXNDR.BE/
+beatport: https://www.beatport.com/de/artist/lxndr-be/1150426
+bandcamp: https://ardvinnamoon.bandcamp.com/
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  
+# Exclude from output
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .git
+  - .gitignore
+  - CNAME
