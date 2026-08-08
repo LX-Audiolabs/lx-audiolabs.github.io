@@ -2,18 +2,18 @@
 title: LX Audiolabs
 email: contact@lx-audiolabs.com
 description: >-
-  AI-first audio tools — CLAP plugins shaped by real producing & mastering workflows.
+  AI-first audio tools — CLAP/VST3/LV2 plugins built with AURA & agal, shaped by real producing & mastering workflows.
 baseurl: ""
 url: "https://lx-audiolabs.github.io"
 
 # Update Banner — newest first
 updates:
+  - date: "2026-08-08"
+    text: "Framework migration complete: All plugins now built with AURA (our own Rust audio framework) + agal (AI-assisted orientation tooling). New UI stack: Slint + FemtoVG. CLAP, VST3, and LV2 support at build time."
   - date: "2026-07-22"
     text: "NEW Plugin: Lucent v1.0.0 — a resonance detection and frequency masking analyser for multi-track mixing. Now available for Linux, macOS, and Windows."
   - date: "2026-07-22"
     text: "Meridian v1.9.8, Equilibrium v1.6.11, Aether v1.2.8: New releases with some minor bugfixes: copy&paste + presetmanagement improvements."
-  - date: "2026-07-04"
-    text: "All plugins migrated to Truce + Vizia — new UI framework with GPU-accelerated rendering, faster startup, and native CLAP integration. No more nice-plug/Iced."
 
 # Social
 discord: https://discord.gg/ew6kPtdDJ6

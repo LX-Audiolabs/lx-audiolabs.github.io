@@ -3,8 +3,11 @@
 This is the public issue tracker for **LX Audiolabs CLAP plugins**.  
 The actual website lives at **[lxndrbe.github.io](https://lxndrbe.github.io)**.
 
-<a href="https://truce.audio/" target="_blank" rel="noopener">
-  <img src="https://truce.audio/branding/built-with-truce-dark.svg" alt="Built with Truce" height="42">
+<a href="https://github.com/LX-Audiolabs/aura" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/built%20with-AURA-00ADD8?style=for-the-badge&logo=rust" alt="Built with AURA" height="42">
+</a>
+<a href="https://github.com/LX-Audiolabs/agal" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/powered%20by-agal-6E40C9?style=for-the-badge" alt="Powered by agal" height="42">
 </a>
 
 ## 🐛 Report a Bug

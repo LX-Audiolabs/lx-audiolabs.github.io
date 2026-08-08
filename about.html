@@ -25,18 +25,27 @@ permalink: /about/
   <!-- ═══════════ TECH STACK ═══════════ -->
 
   <div class="info-section" id="tech-stack">
-    <h2>Built with Truce</h2>
+    <h2>Built with AURA &amp; agal</h2>
     <p>
-      LX Audiolabs plugins are programmed in <strong>Rust</strong> using the
-      <a href="https://truce.audio/" target="_blank" rel="noopener"><strong>truce.audio</strong></a> framework.
-      For the current production UI stack we use <strong>Vizia</strong> with <strong>Skia + OpenGL</strong> rendering.
+      LX Audiolabs plugins are programmed in <strong>Rust</strong> using our own
+      <a href="https://github.com/LX-Audiolabs/aura" target="_blank" rel="noopener"><strong>AURA</strong></a>
+      framework — a CLAP-first, Slint-native audio plugin framework we built from the ground up after years of
+      shipping production plugins.
+      Development is guided by
+      <a href="https://github.com/LX-Audiolabs/agal" target="_blank" rel="noopener"><strong>agal</strong></a>,
+      our AI-assisted orientation and agent tooling.
     </p>
     <p>
-      This stack gives us deterministic DSP, high-performance plugin runtimes, and fast GPU-driven interfaces for meters and analyzers.
+      The UI stack uses <strong>Slint</strong> with <strong>FemtoVG</strong> (OpenGL) rendering —
+      giving us declarative UI design, GPU-accelerated meters and analyzers, and a clean
+      separation between DSP and presentation.
     </p>
     <p>
-      <a href="https://truce.audio/" target="_blank" rel="noopener" title="Built with Truce">
-        <img src="https://truce.audio/branding/built-with-truce-dark.svg" alt="Built with Truce" height="38">
+      <a href="https://github.com/LX-Audiolabs/aura" target="_blank" rel="noopener" title="Built with AURA">
+        <img src="https://img.shields.io/badge/built%20with-AURA-00ADD8?style=for-the-badge&logo=rust" alt="Built with AURA" height="38">
+      </a>
+      <a href="https://github.com/LX-Audiolabs/agal" target="_blank" rel="noopener" title="Powered by agal" style="margin-left:8px">
+        <img src="https://img.shields.io/badge/powered%20by-agal-6E40C9?style=for-the-badge" alt="Powered by agal" height="38">
       </a>
     </p>
   </div>

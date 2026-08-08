@@ -27,7 +27,7 @@
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia, OpenGL)
+    language: Rust (AURA, Slint, FemtoVG)
   downloads:
     win: releases/aether-v1.2.8-win.zip
     linux: releases/aether-v1.2.8-linux.zip
@@ -71,12 +71,12 @@
     - "Goniometer scope visualization with auto-scaling envelope follower"
     - "SNAP export — structured Markdown snapshot for AI-assisted analysis and feedback"
     - "Zero-latency processing with static pre-master gain correction"
-    - "GPU-accelerated Iced/wgpu UI with responsive band visualization"
+    - "GPU-accelerated Slint UI with responsive band visualization"
     - "Mono and Delta monitoring modes for diagnostic analysis"
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia, OpenGL)
+    language: Rust (AURA, Slint, FemtoVG)
   downloads:
     win: releases/equilibrium-v1.6.11-win.zip
     linux: releases/equilibrium-v1.6.11-linux.zip
@@ -130,7 +130,7 @@
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia, OpenGL)
+    language: Rust (AURA, Slint, FemtoVG)
   downloads:
     win: releases/meridian-v1.9.8-win.zip
     linux: releases/meridian-v1.9.8-linux.zip
@@ -179,7 +179,7 @@
   tech:
     format: "CLAP, LV2"
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (Truce, Vizia, OpenGL)
+    language: Rust (AURA, Slint, FemtoVG)
   downloads:
     win: releases/lucent-v1.0.0-win.zip
     mac: releases/lucent-v1.0.0-macos.zip

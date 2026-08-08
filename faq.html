@@ -13,8 +13,8 @@ permalink: /faq/
     <div class="faq-item">
       <div class="q">Q: So many megabytes for such a small plugin — what's in there, lead?</div>
       <div class="a">
-        Nope, pure graphics power! 🚀 These plugins use <strong>Rust</strong> and the
-        <strong>Vizia</strong> framework with <strong>Skia + OpenGL</strong> on board — a portable 2D graphics
+        Nope, pure graphics power! 🚀 These plugins use <strong>Rust</strong> with the
+        <strong>Slint</strong> UI toolkit and <strong>FemtoVG</strong> (OpenGL) rendering — a portable 2D graphics
         engine that lives inside the plugin. It brings its own cinema instead of relying on your
         operating system's wobbly folding chairs. The first 10+ MB are reserved for the red carpet,
         lighting rig, and popcorn machine. Everything beyond that is actual audio magic. 🍿😎
@@ -38,21 +38,27 @@ permalink: /faq/
         and <strong>Reaper</strong> ourselves. If your DAW can't load CLAP: switch to one that
         can, or send their support team persistently friendly emails until they wake up. 🦖✉️<br><br>
         <strong>Good news:</strong> LX AudioLabs is now <strong>fully open source</strong>!
-        The plugins also support <strong>VST3</strong> and <strong>LV2</strong> at build time —
-        you can compile them yourself from our
+        Our <strong>AURA</strong> framework supports <strong>CLAP, VST3, and LV2</strong> —
+        you can compile any plugin in all three formats yourself from our
         <a href="https://github.com/LX-Audiolabs/lx-audiolabs" target="_blank" rel="noopener">GitHub repository</a>.
-        We only distribute CLAP as pre-built binaries.
+        We distribute CLAP as pre-built binaries; VST3 and LV2 are available at build time.
       </div>
     </div>
 
     <div class="faq-item">
-      <div class="q">Q: What is the Truce framework and why did you switch?</div>
+      <div class="q">Q: What are AURA and agal?</div>
       <div class="a">
-        <strong>Truce</strong> is an open-source Rust framework for building audio plugins,
-        developed by the community behind CLAP. We migrated all LX plugins from nice-plug to
-        Truce in July 2026. The switch gives us native CLAP + VST3 support, better performance,
-        cleaner DSP APIs, and puts us on the same foundation the pros use — a solid base for
-        everything we build next.
+        <strong>AURA</strong> (Audio Unified Rust Architecture) is our own open-source Rust framework
+        for building audio plugins — CLAP-first, with VST3 and LV2 support, and a declarative
+        <strong>Slint</strong> UI layer. We built it after years of shipping production plugins on
+        other frameworks, keeping what worked and dropping what didn't.
+        <br><br>
+        <strong>agal</strong> (Agentic Audiolab) is our AI-assisted orientation and agent tooling —
+        it maps project structure, tracks health, syncs development skills across workspaces,
+        and helps both humans and AI assistants navigate the codebase efficiently.
+        <br><br>
+        Together they form the foundation for everything we build — a clean, modern stack
+        designed for AI-paired development from day one.
       </div>
     </div>
 
@@ -79,7 +85,7 @@ permalink: /faq/
     <div class="faq-item" id="gpu">
       <div class="q">Q: Why do the plugins need a GPU? Do they work on older hardware?</div>
       <div class="a">
-        <strong>OpenGL 3.0+ GPU required.</strong> LX plugins use GPU-accelerated rendering (Vizia + OpenGL/Skia)
+        <strong>OpenGL 3.0+ GPU required.</strong> LX plugins use GPU-accelerated rendering (Slint + FemtoVG/OpenGL)
         for real-time spectrum analyzers, goniometers, and meters. OpenGL 3.0 is nearly universal —
         any GPU from <strong>~2008 or newer</strong> works (NVIDIA GeForce 8 series, Intel HD Graphics,
         AMD Radeon HD 2000 series, Apple M1+).<br><br>
