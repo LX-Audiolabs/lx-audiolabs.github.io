@@ -36,7 +36,8 @@
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Aether"
   youtube_url: ""
   image: assets/img/aether-sc.jpg
-  banner: assets/img/Aether-banner.jpg
+  banner: assets/img/Aether-banner.png
+  banner_small: assets/img/Aether-banner-small.jpg
   status: stable
 
 - slug: equilibrium
@@ -87,7 +88,8 @@
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Equilibrium"
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/equilibrium-sc.jpg
-  banner: assets/img/Equilibrum-banner.jpg
+  banner: assets/img/Equilibrum-banner.png
+  banner_small: assets/img/Equilibrum-banner-small.jpg
   status: stable
 
 - slug: meridian
@@ -145,7 +147,8 @@
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Meridian"
   youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
   image: assets/img/meridian-sc.jpg
-  banner: assets/img/Meridian-banner.jpg
+  banner: assets/img/Meridian-banner.png
+  banner_small: assets/img/Meridian-banner-small.jpg
   status: stable
 
 - slug: lucent
@@ -197,5 +200,6 @@
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
   youtube_url: ""
   image: assets/img/lucent-sc.jpg
-  banner: assets/img/Lucent-banner.jpg
+  banner: assets/img/Lucent-banner.png
+  banner_small: assets/img/Lucent-banner-small.jpg
   status: stable

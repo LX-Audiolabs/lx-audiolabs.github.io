@@ -1,5 +1,5 @@
 <a href="{{ '/plugins/' | append: plugin.slug | append: '/' | relative_url }}" class="plugin-card">
-  {% assign card_image = plugin.banner | default: plugin.image %}
+  {% assign card_image = plugin.banner_small | default: plugin.banner | default: plugin.image %}
   {% if card_image and card_image != "" %}
   <img src="{{ card_image | relative_url }}" alt="{{ plugin.name }}">
   {% endif %}
