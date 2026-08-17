@@ -1,6 +1,6 @@
 - slug: aether
   name: Aether
-  version: v1.2.8
+  version: v1.4.1
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
@@ -23,15 +23,16 @@
     - "Manual AutoEQ.app value entry — copy FREQ/GAIN/Q from AutoEQ"
     - "Preset persistence with automatic load-on-launch"
     - "Input peak metering with peak hold"
+    - "UI zoom — 75% / 100% / 125%"
     - "Zero-latency monitoring DSP"
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/aether-v1.2.8-win.zip
-    linux: releases/aether-v1.2.8-linux.zip
-    mac: releases/aether-v1.2.8-macos.zip
+    win: releases/aether-v1.4.1-win.zip
+    linux: releases/aether-v1.4.1-linux.zip
+    mac: releases/aether-v1.4.1-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Aether"
   youtube_url: ""
   image: assets/img/aether-sc.jpg
@@ -40,7 +41,7 @@
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.6.11
+  version: v1.8.1
   tagline: >-
     Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
     Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
@@ -73,14 +74,16 @@
     - "Zero-latency processing with static pre-master gain correction"
     - "GPU-accelerated Slint UI with responsive band visualization"
     - "Mono and Delta monitoring modes for diagnostic analysis"
+    - "Pre-Master 2-second peak hold with click-to-reset"
+    - "UI zoom — 75% / 100% / 125%"
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/equilibrium-v1.6.11-win.zip
-    linux: releases/equilibrium-v1.6.11-linux.zip
-    mac: releases/equilibrium-v1.6.11-macos.zip
+    win: releases/equilibrium-v1.8.1-win.zip
+    linux: releases/equilibrium-v1.8.1-linux.zip
+    mac: releases/equilibrium-v1.8.1-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Equilibrium"
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/equilibrium-sc.jpg
@@ -89,7 +92,7 @@
 
 - slug: meridian
   name: Meridian
-  version: v1.9.8
+  version: v1.11.1
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
@@ -114,7 +117,7 @@
   features:
     - "5-band parametric EQ with variable frequencies (Bass, Lo-Mid, Mid, Hi-Mid, High)"
     - "Per-band slope selection (A/B/C: gentle / medium / steep)"
-    - "Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)"
+    - "Tilt EQ for tone shaping (−2 to +2 dB around 1 kHz pivot; warm/bright toggle)"
     - "High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)"
     - "Soft-knee compressor (1.5–4.0:1 ratio, automatic knee, with GR envelope visualization)"
     - "Compressor mini display — real-time gain reduction meter in the main UI"
@@ -126,15 +129,19 @@
     - "Amber EQ curve overlay showing exact band response"
     - "Stereo phase correlation meter and goniometer visualization"
     - "SNAP export — structured Markdown snapshot for AI feedback"
+    - "Spectrum smoothing toggle (smoothed / raw)"
+    - "Auto-loud LUFS metering"
+    - "Peak-hold reset on click"
+    - "UI zoom — 75% / 100% / 125%"
     - "Zero-latency processing with denormal protection"
   tech:
     format: CLAP
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/meridian-v1.9.8-win.zip
-    linux: releases/meridian-v1.9.8-linux.zip
-    mac: releases/meridian-v1.9.8-macos.zip
+    win: releases/meridian-v1.11.1-win.zip
+    linux: releases/meridian-v1.11.1-linux.zip
+    mac: releases/meridian-v1.11.1-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Meridian"
   youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
   image: assets/img/meridian-sc.jpg
@@ -143,7 +150,7 @@
 
 - slug: lucent
   name: Lucent
-  version: "1.0.0"
+  version: "1.2.1"
   tagline: >-
     Multi-track spectral analyzer. Detect resonances, visualize frequency masking,
     and share spectra across tracks via Relay.
@@ -175,15 +182,18 @@
     - "Max-hold + decay envelope with adjustable hold time"
     - "SNAP export — structured Markdown snapshot of session max-hold resonance + masking"
     - "Preset persistence with automatic load-on-launch"
+    - "FFT hover cursor — Hz/kHz frequency readout at the mouse"
+    - "Spectrum smoothing toggle"
+    - "UI zoom — 75% / 100% / 125%"
     - "Zero-latency DSP — Lucent analyzes only, never touches your audio stream"
   tech:
     format: "CLAP, LV2"
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/lucent-v1.0.0-win.zip
-    mac: releases/lucent-v1.0.0-macos.zip
-    linux: releases/lucent-v1.0.0-linux.zip
+    win: releases/lucent-v1.2.1-win.zip
+    mac: releases/lucent-v1.2.1-macos.zip
+    linux: releases/lucent-v1.2.1-linux.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
   youtube_url: ""
   image: assets/img/lucent-sc.jpg

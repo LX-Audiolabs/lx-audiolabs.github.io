@@ -8,8 +8,10 @@ url: "https://lx-audiolabs.github.io"
 
 # Update Banner — newest first
 updates:
+  - date: "2026-08-17"
+    text: "New releases: Aether v1.4.1, Equilibrium v1.8.1, Meridian v1.11.1, Lucent v1.2.1 — UI zoom (75/100/125%), stability and UI fixes."
   - date: "2026-08-08"
-    text: "Framework migration complete: All plugins now built with AURA (our own Rust audio framework) + agal (AI-assisted orientation tooling). New UI stack: Slint + FemtoVG. CLAP, VST3, and LV2 support at build time."
+    text: "Framework migration complete: All plugins now built with AURA (our own Rust audio framework) + agal (AI-assisted orientation tooling). Completely redesigned UI in Slint + FemtoVG — a soft-3D look with GPU-accelerated meters and analyzers. CLAP, VST3, and LV2 support at build time."
   - date: "2026-07-22"
     text: "NEW Plugin: Lucent v1.0.0 — a resonance detection and frequency masking analyser for multi-track mixing. Now available for Linux, macOS, and Windows."
   - date: "2026-07-22"
