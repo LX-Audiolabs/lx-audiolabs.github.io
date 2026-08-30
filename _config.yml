@@ -8,6 +8,8 @@ url: "https://lx-audiolabs.github.io"
 
 # Update Banner — newest first
 updates:
+  - date: "2026-08-23"
+    text: "New releases: Aether v1.4.2, Equilibrium v1.8.2, Meridian v1.11.2, Lucent v1.2.2 — HiDPI display fix in hosts that don't send a scale factor (e.g. Bitwig on Windows), framework AURA 0.9.3."
   - date: "2026-08-17"
     text: "New releases: Aether v1.4.1, Equilibrium v1.8.1, Meridian v1.11.1, Lucent v1.2.1 — UI zoom (75/100/125%), stability and UI fixes."
   - date: "2026-08-08"

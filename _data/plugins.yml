@@ -1,6 +1,6 @@
 - slug: aether
   name: Aether
-  version: v1.4.1
+  version: v1.4.2
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
@@ -30,9 +30,9 @@
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/aether-v1.4.1-win.zip
-    linux: releases/aether-v1.4.1-linux.zip
-    mac: releases/aether-v1.4.1-macos.zip
+    win: releases/aether-v1.4.2-win.zip
+    linux: releases/aether-v1.4.2-linux.zip
+    mac: releases/aether-v1.4.2-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Aether"
   youtube_url: ""
   image: assets/img/aether-sc.jpg
@@ -42,7 +42,7 @@
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.8.1
+  version: v1.8.2
   tagline: >-
     Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
     Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
@@ -82,9 +82,9 @@
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/equilibrium-v1.8.1-win.zip
-    linux: releases/equilibrium-v1.8.1-linux.zip
-    mac: releases/equilibrium-v1.8.1-macos.zip
+    win: releases/equilibrium-v1.8.2-win.zip
+    linux: releases/equilibrium-v1.8.2-linux.zip
+    mac: releases/equilibrium-v1.8.2-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Equilibrium"
   youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/equilibrium-sc.jpg
@@ -94,7 +94,7 @@
 
 - slug: meridian
   name: Meridian
-  version: v1.11.1
+  version: v1.11.2
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
@@ -141,9 +141,9 @@
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/meridian-v1.11.1-win.zip
-    linux: releases/meridian-v1.11.1-linux.zip
-    mac: releases/meridian-v1.11.1-macos.zip
+    win: releases/meridian-v1.11.2-win.zip
+    linux: releases/meridian-v1.11.2-linux.zip
+    mac: releases/meridian-v1.11.2-macos.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Meridian"
   youtube_url: "https://www.youtube.com/watch?v=TeQXTADFTH8&t=1005"
   image: assets/img/meridian-sc.jpg
@@ -153,7 +153,7 @@
 
 - slug: lucent
   name: Lucent
-  version: "1.2.1"
+  version: "1.2.2"
   tagline: >-
     Multi-track spectral analyzer. Detect resonances, visualize frequency masking,
     and share spectra across tracks via Relay.
@@ -194,9 +194,9 @@
     platforms: "Windows 10/11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (AURA, Slint, FemtoVG)
   downloads:
-    win: releases/lucent-v1.2.1-win.zip
-    mac: releases/lucent-v1.2.1-macos.zip
-    linux: releases/lucent-v1.2.1-linux.zip
+    win: releases/lucent-v1.2.2-win.zip
+    mac: releases/lucent-v1.2.2-macos.zip
+    linux: releases/lucent-v1.2.2-linux.zip
   manual_url: "https://github.com/LX-Audiolabs/lx-audiolabs.github.io/wiki/Lucent"
   youtube_url: ""
   image: assets/img/lucent-sc.jpg
